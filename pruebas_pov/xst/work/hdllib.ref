@@ -1,0 +1,4 @@
+AR main behavioral "C:/Users/Luis Hernandez/Documents/Proyecto E3/pruebas_pov/main.vhd" sub00/vhpl01 1555268686
+EN main NULL "C:/Users/Luis Hernandez/Documents/Proyecto E3/pruebas_pov/main.vhd" sub00/vhpl00 1555268685
+EN sensor NULL "C:/Users/Luis Hernandez/Documents/Proyecto E3/pruebas_pov/sensor.vhd" sub00/vhpl02 1555266882
+AR sensor behavioral "C:/Users/Luis Hernandez/Documents/Proyecto E3/pruebas_pov/sensor.vhd" sub00/vhpl03 1555266883

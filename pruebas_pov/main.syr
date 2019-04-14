@@ -1,0 +1,455 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
+ 
+--> Reading design: main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main"
+Output Format                      : NGC
+Target Device                      : xc3s50a-5-tq144
+
+---- Source Options
+Top Module Name                    : main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Luis Hernandez/Documents/Proyecto E3/pruebas_pov/main.vhd" in Library work.
+Entity <main> compiled.
+Entity <main> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <main> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <main> in library <work> (Architecture <behavioral>).
+INFO:Xst:2679 - Register <caracter1<0>> in unit <main> has a constant value of 1111111111 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <caracter1<1>> in unit <main> has a constant value of 1111111111 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <caracter1<2>> in unit <main> has a constant value of 1111111111 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <caracter2<0>> in unit <main> has a constant value of 1111111111 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <caracter2<1>> in unit <main> has a constant value of 1111111111 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <caracter2<2>> in unit <main> has a constant value of 1100000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <caracter3<0>> in unit <main> has a constant value of 1100000000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <caracter3<1>> in unit <main> has a constant value of 1100001000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <caracter3<2>> in unit <main> has a constant value of 1100001100 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <caracter4<0>> in unit <main> has a constant value of 0000110000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <caracter4<1>> in unit <main> has a constant value of 0000110000 during circuit operation. The register is replaced by logic.
+INFO:Xst:2679 - Register <caracter4<2>> in unit <main> has a constant value of 0000110000 during circuit operation. The register is replaced by logic.
+Entity <main> analyzed. Unit <main> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <main>.
+    Related source file is "C:/Users/Luis Hernandez/Documents/Proyecto E3/pruebas_pov/main.vhd".
+    Found 4x3-bit ROM for signal <salida_color$mux0000> created at line 96.
+    Found 3-bit register for signal <salida_color>.
+    Found 11-bit up counter for signal <cont>.
+    Found 32-bit up counter for signal <Conteo>.
+    Found 32-bit up counter for signal <conteo_color>.
+    Found 32-bit comparator greater for signal <conteo_color$cmp_gt0000> created at line 93.
+    Found 31-bit up counter for signal <grado>.
+    Found 31-bit comparator greater for signal <led$cmp_gt0000> created at line 121.
+    Found 31-bit comparator greater for signal <led$cmp_gt0001> created at line 122.
+    Found 31-bit comparator greater for signal <led$cmp_gt0002> created at line 124.
+    Found 31-bit comparator greater for signal <led$cmp_gt0003> created at line 126.
+    Found 31-bit comparator greater for signal <led$cmp_gt0004> created at line 128.
+    Found 31-bit comparator greater for signal <led$cmp_gt0005> created at line 130.
+    Found 31-bit comparator greater for signal <led$cmp_gt0006> created at line 132.
+    Found 31-bit comparator greater for signal <led$cmp_gt0007> created at line 134.
+    Found 31-bit comparator greater for signal <led$cmp_gt0008> created at line 136.
+    Found 31-bit comparator greater for signal <led$cmp_gt0009> created at line 138.
+    Found 31-bit comparator greater for signal <led$cmp_gt0010> created at line 140.
+    Found 31-bit comparator greater for signal <led$cmp_gt0011> created at line 142.
+    Found 31-bit comparator less for signal <led$cmp_lt0000> created at line 121.
+    Found 31-bit comparator less for signal <led$cmp_lt0001> created at line 122.
+    Found 31-bit comparator less for signal <led$cmp_lt0002> created at line 124.
+    Found 31-bit comparator less for signal <led$cmp_lt0003> created at line 126.
+    Found 31-bit comparator less for signal <led$cmp_lt0004> created at line 128.
+    Found 31-bit comparator less for signal <led$cmp_lt0005> created at line 130.
+    Found 31-bit comparator less for signal <led$cmp_lt0006> created at line 132.
+    Found 31-bit comparator less for signal <led$cmp_lt0007> created at line 134.
+    Found 31-bit comparator less for signal <led$cmp_lt0008> created at line 136.
+    Found 31-bit comparator less for signal <led$cmp_lt0009> created at line 138.
+    Found 31-bit comparator less for signal <led$cmp_lt0010> created at line 140.
+    Found 31-bit comparator less for signal <led$cmp_lt0011> created at line 142.
+    Found 32-bit comparator less for signal <salida_color$cmp_lt0000> created at line 87.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   4 Counter(s).
+	inferred   3 D-type flip-flop(s).
+	inferred  26 Comparator(s).
+Unit <main> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 4x3-bit ROM                                           : 1
+# Counters                                             : 4
+ 11-bit up counter                                     : 1
+ 31-bit up counter                                     : 1
+ 32-bit up counter                                     : 2
+# Registers                                            : 1
+ 3-bit register                                        : 1
+# Comparators                                          : 26
+ 31-bit comparator greater                             : 12
+ 31-bit comparator less                                : 12
+ 32-bit comparator greater                             : 1
+ 32-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <main>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_salida_color_mux0000> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <main> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 4x3-bit ROM                                           : 1
+# Counters                                             : 4
+ 11-bit up counter                                     : 1
+ 31-bit up counter                                     : 1
+ 32-bit up counter                                     : 2
+# Registers                                            : 3
+ Flip-Flops                                            : 3
+# Comparators                                          : 26
+ 31-bit comparator greater                             : 12
+ 31-bit comparator less                                : 12
+ 32-bit comparator greater                             : 1
+ 32-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <main> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 31.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 109
+ Flip-Flops                                            : 109
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : main.ngr
+Top Level Output File Name         : main
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 15
+
+Cell Usage :
+# BELS                             : 867
+#      GND                         : 1
+#      INV                         : 43
+#      LUT1                        : 133
+#      LUT2                        : 37
+#      LUT3                        : 17
+#      LUT4                        : 164
+#      MUXCY                       : 365
+#      VCC                         : 1
+#      XORCY                       : 106
+# FlipFlops/Latches                : 109
+#      FDE                         : 3
+#      FDR                         : 43
+#      FDRE                        : 63
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 14
+#      IBUF                        : 1
+#      OBUF                        : 13
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50atq144-5 
+
+ Number of Slices:                      205  out of    704    29%  
+ Number of Slice Flip Flops:            109  out of   1408     7%  
+ Number of 4 input LUTs:                394  out of   1408    27%  
+ Number of IOs:                          15
+ Number of bonded IOBs:                  15  out of    108    13%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+Clk                                | BUFGP                  | 109   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 7.099ns (Maximum Frequency: 140.868MHz)
+   Minimum input arrival time before clock: 3.317ns
+   Maximum output required time after clock: 12.188ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Clk'
+  Clock period: 7.099ns (frequency: 140.868MHz)
+  Total number of paths / destination ports: 6585 / 281
+-------------------------------------------------------------------------
+Delay:               7.099ns (Levels of Logic = 15)
+  Source:            Conteo_0 (FF)
+  Destination:       conteo_color_0 (FF)
+  Source Clock:      Clk rising
+  Destination Clock: Clk rising
+
+  Data Path: Conteo_0 to conteo_color_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.495   0.488  Conteo_0 (Conteo_0)
+     LUT3:I0->O            1   0.561   0.000  Mcompar_salida_color_cmp_lt0000_lut<0> (Mcompar_salida_color_cmp_lt0000_lut<0>)
+     MUXCY:S->O            1   0.523   0.000  Mcompar_salida_color_cmp_lt0000_cy<0> (Mcompar_salida_color_cmp_lt0000_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_salida_color_cmp_lt0000_cy<1> (Mcompar_salida_color_cmp_lt0000_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_salida_color_cmp_lt0000_cy<2> (Mcompar_salida_color_cmp_lt0000_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_salida_color_cmp_lt0000_cy<3> (Mcompar_salida_color_cmp_lt0000_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_salida_color_cmp_lt0000_cy<4> (Mcompar_salida_color_cmp_lt0000_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_salida_color_cmp_lt0000_cy<5> (Mcompar_salida_color_cmp_lt0000_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_salida_color_cmp_lt0000_cy<6> (Mcompar_salida_color_cmp_lt0000_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_salida_color_cmp_lt0000_cy<7> (Mcompar_salida_color_cmp_lt0000_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_salida_color_cmp_lt0000_cy<8> (Mcompar_salida_color_cmp_lt0000_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_salida_color_cmp_lt0000_cy<9> (Mcompar_salida_color_cmp_lt0000_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_salida_color_cmp_lt0000_cy<10> (Mcompar_salida_color_cmp_lt0000_cy<10>)
+     MUXCY:CI->O           1   0.179   0.423  Mcompar_salida_color_cmp_lt0000_cy<11> (Mcompar_salida_color_cmp_lt0000_cy<11>)
+     LUT3:I1->O           66   0.562   1.148  Mcompar_salida_color_cmp_lt0000_cy<13>1 (Mcompar_salida_color_cmp_lt0000_cy<13>)
+     LUT2:I1->O           32   0.562   1.073  conteo_color_and00001 (conteo_color_and0000)
+     FDRE:R                    0.435          conteo_color_0
+    ----------------------------------------
+    Total                      7.099ns (3.967ns logic, 3.132ns route)
+                                       (55.9% logic, 44.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
+  Total number of paths / destination ports: 31 / 31
+-------------------------------------------------------------------------
+Offset:              3.317ns (Levels of Logic = 2)
+  Source:            sensor (PAD)
+  Destination:       grado_0 (FF)
+  Destination Clock: Clk rising
+
+  Data Path: sensor to grado_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.824   0.423  sensor_IBUF (sensor_IBUF)
+     LUT4:I1->O           31   0.562   1.073  grado_and00001 (grado_and0000)
+     FDRE:R                    0.435          grado_0
+    ----------------------------------------
+    Total                      3.317ns (1.821ns logic, 1.496ns route)
+                                       (54.9% logic, 45.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
+  Total number of paths / destination ports: 4759 / 13
+-------------------------------------------------------------------------
+Offset:              12.188ns (Levels of Logic = 15)
+  Source:            grado_4 (FF)
+  Destination:       led<5> (PAD)
+  Source Clock:      Clk rising
+
+  Data Path: grado_4 to led<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            24   0.495   1.172  grado_4 (grado_4)
+     LUT1:I0->O            1   0.561   0.000  Mcompar_led_cmp_gt0000_cy<1>_4_rt (Mcompar_led_cmp_gt0000_cy<1>_4_rt)
+     MUXCY:S->O            1   0.523   0.000  Mcompar_led_cmp_gt0000_cy<1>_4 (Mcompar_led_cmp_gt0000_cy<1>5)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_led_cmp_gt0000_cy<2>_4 (Mcompar_led_cmp_gt0000_cy<2>5)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_led_cmp_gt0000_cy<3>_4 (Mcompar_led_cmp_gt0000_cy<3>5)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_led_cmp_gt0000_cy<4>_4 (Mcompar_led_cmp_gt0000_cy<4>5)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_led_cmp_gt0000_cy<5>_4 (Mcompar_led_cmp_gt0000_cy<5>5)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_led_cmp_gt0000_cy<6>_4 (Mcompar_led_cmp_gt0000_cy<6>5)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_led_cmp_gt0000_cy<7>_4 (Mcompar_led_cmp_gt0000_cy<7>5)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_led_cmp_gt0000_cy<8>_2 (Mcompar_led_cmp_gt0000_cy<8>3)
+     MUXCY:CI->O           2   0.179   0.488  Mcompar_led_cmp_gt0000_cy<9>_1 (Mcompar_led_cmp_gt0000_cy<9>2)
+     LUT4:I0->O            1   0.561   0.423  led<4>2_SW1 (N13)
+     LUT3:I1->O            2   0.562   0.446  led<4>2 (N2)
+     LUT4:I1->O            1   0.562   0.423  led<4>30_SW0 (N15)
+     LUT4:I1->O            2   0.562   0.380  led<4>30 (led_4_OBUF)
+     OBUF:I->O                 4.396          led_5_OBUF (led<5>)
+    ----------------------------------------
+    Total                     12.188ns (8.856ns logic, 3.332ns route)
+                                       (72.7% logic, 27.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.97 secs
+ 
+--> 
+
+Total memory usage is 4534808 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
+

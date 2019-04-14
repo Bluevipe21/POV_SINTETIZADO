@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Luis Hernandez\Documents\Proyecto E3\pruebas_pov\main.ncd
+OUTFILE=C:\Users\Luis Hernandez\Documents\Proyecto E3\pruebas_pov\main.bit
+FAMILY=Spartan3A and Spartan3AN
+PART=xc3s50a-5tq144
+WORKINGDIR=C:\Users\Luis Hernandez\Documents\Proyecto E3\pruebas_pov
+LICENSE=WebPack
+USER_INFO=211678254_0_0_377

@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Luis Hernandez/Documents/Proyecto E3/pruebas_pov/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Luis Hernandez/Documents/Proyecto E3/pruebas_pov/xst"
+elaborate
+-ifn sensor.prj
+-ifmt mixed

@@ -1,0 +1,1 @@
+vhdtdtfi -prj pruebas_pov -o "C:/Users/Luis Hernandez/Documents/Proyecto E3/pruebas_pov/sensor.vhi" -module sensor -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work sensor.vhd 
