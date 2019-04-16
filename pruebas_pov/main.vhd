@@ -37,7 +37,8 @@ entity main is
 	Port(	
 			  Clk:		in		std_logic;
 			  salida_color: out std_logic_vector(2 downto 0);
-			  led : out  std_logic_vector(9 downto 0);
+			  led : out  std_logic_vector(5 downto 0);
+			  movled:out std_logic_vector(3 downto 0);
 			  sensor:in std_logic
 	);
 end main;
@@ -45,16 +46,19 @@ end main;
 architecture Behavioral of main is
 	
 --Declaracion de maquinas de estado
-
-type memoria is array (0 to 2) of std_logic_vector(9 downto 0);
+type memoria is array (0 to 3) of std_logic_vector(5 downto 0);
 type colores is array (0 to 4) of std_logic_vector(2 downto 0);
-type mensaje is array(0 to 42) of memoria;
+type mensaje is array(0 to 41) of memoria;
+type efecto is array (0 to 1) of std_logic_vector(3 downto 0);
 --variables para procesos
 signal Conteo:integer:=0;
 signal cont:integer range 0 to 1109:=0;
 signal grado:natural:=0;
 signal conteo_color:integer:=0;
 signal conteo_caracteres:integer:=0;
+signal move1,move2:std_logic_vector(3 downto 0);
+constant mover:efecto:=(0=>"1001",
+								1=>"0110");
 
 constant color:colores:=(0=>"100",
 							  1=>"010",
@@ -62,218 +66,257 @@ constant color:colores:=(0=>"100",
 						     3=>"011",
 							  4=>"110");
 							  
-constant A:memoria:=(0=>"1111111111",--Primer tanda
-						 1=>"1111111111",
-						 2=>"1111111111");
+constant A:memoria:=(--Primer tanda
+						 0=>"111111",
+						 1=>"001011",
+						 2=>"001011",
+						 3=>"111111");
 						 
-constant L:memoria:=(0=>"1111111111",
-							1=>"1000000000",
-							2=>"1000000000");
+constant L:memoria:=(
+						 0=>"100000",
+						 1=>"100000",
+						 2=>"100000",
+						 3=>"111111");
 						
 constant uno:memoria:=(
-							0=>"1100000100",
-							1=>"1111111111",
-							2=>"1100000000");
+							0=>"000100",
+							1=>"100110",
+							2=>"111111",
+							3=>"100000");
 							
 constant mas:memoria:=(
-							0=>"0000110000",
-							1=>"0011111100",
-							2=>"0000110000");
+							0=>"001100",
+							1=>"111111",
+							2=>"111111",
+							3=>"001100");
 
 constant igual:memoria:=(--Segunda tanda
-							0=>"0000101000",
-							1=>"0000101000",
-							2=>"0000101000");
+							0=>"110011",
+							1=>"110011",
+							2=>"110011",
+							3=>"110011");
 							
 constant division:memoria:=(
-							0=>"0000110000",
-							1=>"0100110010",
-							2=>"0000110000");
+							0=>"001100",
+							1=>"101101",
+							2=>"101101",
+							3=>"001100");
 							
 constant siete:memoria:=(
-							0=>"0000000011",
-							1=>"0000000011",
-							2=>"1111111111");
+							0=>"000001",
+							1=>"000001",
+							2=>"000001",
+							3=>"111111");
 							
 constant cero:memoria:=(
-							0=>"1111111111",
-							1=>"1100000011",
-							2=>"1111111111");
+							0=>"111111",
+							1=>"100001",
+							2=>"100001",
+							3=>"111111");
 							
 constant n:memoria:=(--tercera tanda
-							0=>"0111111111",
-							1=>"0000000011",
-							2=>"1111111111");
+							0=>"111111",
+							1=>"000001",
+							2=>"000001",
+							3=>"111111");
 							
 constant c:memoria:=(
-							0=>"1111111111",
-							1=>"1100000011",
-							2=>"1100000011");
+							0=>"100001",
+							1=>"100001",
+							2=>"100001",
+							3=>"111111");
 
 constant t:memoria:=(
-							0=>"0111111111",
-							1=>"1000001000",
-							2=>"0100001000");		
+							0=>"000000",
+							1=>"000001",
+							2=>"111111",
+							3=>"000001");		
 
 constant e:memoria:=(
-							0=>"1111111111",
-							1=>"1100110011",
-							2=>"1100110011");
+							0=>"100111",
+							1=>"100101",
+							2=>"100101",
+							3=>"111111");
 
 constant p:memoria:=(--cuarta tanda
-							0=>"0000000110",
-							1=>"0000000101",
-							2=>"1111111111");
+							0=>"000010",
+							1=>"000101",
+							2=>"000101",
+							3=>"111111");
 
 constant d:memoria:=(
-							0=>"0100000000",
-							1=>"1010000000",
-							2=>"1111111111");		
+							0=>"010000",
+							1=>"101000",
+							2=>"101000",
+							3=>"111111");		
 
 constant i:memoria:=(
-							0=>"1100000011",
-							1=>"1111111111",
-							2=>"1100000011");			
+							0=>"000000",
+							1=>"000000",
+							2=>"111101",
+							3=>"000000");			
 
 constant j:memoria:=(
-							0=>"1100000011",
-							1=>"1111111111",
-							2=>"0000000011");	
+							0=>"000000",
+							1=>"100000",
+							2=>"100000",
+							3=>"111101");	
 
 constant cuatro:memoria:=(--quinta tanda
-							0=>"0000000111",
-							1=>"0000000100",
-							2=>"1111111111");
+							0=>"000111",
+							1=>"000101",
+							2=>"000101",
+							3=>"111111");
 
 constant dos:memoria:=(
-							0=>"1111100001",
-							1=>"1000100001",
-							2=>"1100111111");		
+							0=>"001001",
+							1=>"001101",
+							2=>"001011",
+							3=>"001001");		
 
 constant seis:memoria:=(
-							0=>"1111111111",
-							1=>"1100100011",
-							2=>"1111100011");			
+							0=>"111111",
+							1=>"101001",
+							2=>"101001",
+							3=>"111001");			
 
 constant ocho:memoria:=(
-							0=>"1111111111",
-							1=>"1100110011",
-							2=>"1111111111");
+							0=>"111111",
+							1=>"101101",
+							2=>"101101",
+							3=>"111111");
 							
 constant ene:memoria:=(--sexta tanda
-							0=>"1111110011",
-							1=>"0000110011",
-							2=>"1111110011");
+							0=>"111111",
+							1=>"000001",
+							2=>"000001",
+							3=>"111111");
 
 constant f:memoria:=(
-							0=>"1111111111",
-							1=>"0000011011",
-							2=>"0000011011");		
+							0=>"111111",
+							1=>"000101",
+							2=>"000101",
+							3=>"000101");		
 
 constant x:memoria:=(
-							0=>"0001001000",
-							1=>"0000110000",
-							2=>"0001001000");			
+							0=>"001001",
+							1=>"000110",
+							2=>"000110",
+							3=>"001001");			
 
 constant g:memoria:=(
-							0=>"1111111111",
-							1=>"1100000011",
-							2=>"1111110011");
+							0=>"111111",
+							1=>"100001",
+							2=>"101001",
+							3=>"111001");
 
 constant h:memoria:=(--septima tanda
-							0=>"1111111111",
-							1=>"0000110000",
-							2=>"1111111111");
+							0=>"111111",
+							1=>"001100",
+							2=>"001100",
+							3=>"111111");
 
 constant jmin:memoria:=(
-							0=>"1100000000",
-							1=>"1111110011",
-							2=>"0000000000");		
+							0=>"000000",
+							1=>"100001",
+							2=>"111111",
+							3=>"000001");		
 
 constant z:memoria:=(
-							0=>"0011001100",
-							1=>"0011101100",
-							2=>"0011011100");			
+							0=>"000000",
+							1=>"110001",
+							2=>"101001",
+							3=>"100111");			
 
 constant flecha:memoria:=(
-							0=>"1100000010",
-							1=>"1111111111",
-							2=>"1100000010");
+							0=>"000000",
+							1=>"100010",
+							2=>"111111",
+							3=>"100010");
 
 constant dos_puntos:memoria:=(--octava tanda
-							0=>"0100010000",
-							1=>"1010101000",
-							2=>"0100010000");
+							0=>"000000",
+							1=>"010010",
+							2=>"101101",
+							3=>"010010");
 
 constant coma:memoria:=(
-							0=>"0000000100",
-							1=>"0000101010",
-							2=>"0000111100");		
+							0=>"000000",
+							1=>"100010",
+							2=>"100101",
+							3=>"111111");		
 
 constant cuadrado:memoria:=(
-							0=>"0001111000",
-							1=>"0001111000",
-							2=>"0001111000");			
+							0=>"001111",
+							1=>"001001",
+							2=>"001111",
+							3=>"000000");			
 
 constant rectangulo:memoria:=(
-							0=>"1111111111",
-							1=>"1111111111",
-							2=>"1111111111");
+							0=>"001111",
+							1=>"001001",
+							2=>"001001",
+							3=>"001111");
 
 constant emin:memoria:=(--novena tanda
-							0=>"0011111111",
-							1=>"0011001001",
-							2=>"0011001111");
+							0=>"111111",
+							1=>"100101",
+							2=>"100101",
+							3=>"100111");
 
 constant flor:memoria:=(
-							0=>"0000110000",
-							1=>"1111001111",
-							2=>"0000110000");		
+							0=>"001100",
+							1=>"101101",
+							2=>"101101",
+							3=>"001100");		
 
 constant dmay:memoria:=(
-							0=>"0001111000",
-							1=>"0001001000",
-							2=>"0000100000");			
+							0=>"111110",
+							1=>"100010",
+							2=>"010100",
+							3=>"001000");			
 
 constant triangulo:memoria:=(
-							0=>"0111111110",
-							1=>"0100000001",
-							2=>"0111111110");							
+							0=>"110000",
+							1=>"101111",
+							2=>"101111",
+							3=>"110000");							
 							
 constant u:memoria:=(--decima tanda
-							0=>"1111111111",
-							1=>"1100000000",
-							2=>"1111111111");
+							0=>"111111",
+							1=>"100000",
+							2=>"100000",
+							3=>"111111");
 
 constant casita:memoria:=(
-							0=>"0011111110",
-							1=>"0011000001",
-							2=>"0011111110");		
+							0=>"000000",
+							1=>"111100",
+							2=>"100010",
+							3=>"111100");		
 
 constant cinco:memoria:=(
-							0=>"1100111111",
-							1=>"1100110011",
-							2=>"1111110011");			
+							0=>"100111",
+							1=>"100101",
+							2=>"100101",
+							3=>"111101");			
 
 constant encendido:memoria:=(
-							0=>"0110000000",
-							1=>"0110011110",
-							2=>"0110000000");
+							0=>"000000",
+							1=>"010000",
+							2=>"101011",
+							3=>"010000");
 							
 constant diagonal:memoria:=(--onceava tanda
-							0=>"0000001000",
-							1=>"0000110000",
-							2=>"0001000000");
+							0=>"001000",
+							1=>"000100",
+							2=>"000010",
+							3=>"000001");
 
 constant llave:memoria:=(
-							0=>"0000000010",
-							1=>"0111111101",
-							2=>"0010000010");		
-
-constant hmin:memoria:=(
-							0=>"1111111111",
-							1=>"0000110000",
-							2=>"1111110000");			
+							0=>"000000",
+							1=>"010010",
+							2=>"101111",
+							3=>"010000");				
 						
 
 signal caracteres:mensaje:=(0=>A,
@@ -317,18 +360,18 @@ signal caracteres:mensaje:=(0=>A,
 					38=>cinco,
 					39=>encendido,
 					40=>diagonal,
-					41=>llave,
-					42=>hmin
+					41=>llave
 					);
-signal caracter1,caracter2,caracter3,caracter4:memoria;												
+signal caracter1,caracter2,caracter3,caracter4:memoria;
+										
 begin
 
 reloj_general:process(clk)
 begin
 	if(rising_edge(clk))then
-		if(Conteo<9*11999999)then
+		if(Conteo<8*11999999)then
 			Conteo<=Conteo+1;
-			if(conteo_caracteres=38)then
+			if(conteo_caracteres=37)then
 				conteo_caracteres<=0;
 			end if;
 			if(conteo_color>=4)then
@@ -339,21 +382,12 @@ begin
 			caracter2<=caracteres(conteo_caracteres+1);
 			caracter3<=caracteres(conteo_caracteres+2);
 			caracter4<=caracteres(conteo_caracteres+3);
-		elsif(Conteo>6*11999999 and Conteo<77999993)then
-			caracter1(0)<="0000000000";
-			caracter2(0)<="0000000000";
-			caracter3(0)<="0000000000";
-			caracter4(0)<="0000000000";
-		elsif(Conteo>77999993 and Conteo<83999993)then
-			caracter1(1)<="0000000000";
-			caracter2(1)<="0000000000";
-			caracter3(1)<="0000000000";
-			caracter4(1)<="0000000000";
-		elsif(Conteo>83999993 and Conteo<89999993)then
-			caracter1(2)<="0000000000";
-			caracter2(2)<="0000000000";
-			caracter3(2)<="0000000000";
-			caracter4(2)<="0000000000";
+		elsif(Conteo>6*11999999 and Conteo<7*11999999)then
+			move1<=mover(0);
+			move2<=mover(1);
+		elsif(Conteo>7*11999999 and Conteo<8*11999999)then
+			move1<=mover(1);
+			move2<=mover(0);
 		else
 			Conteo<=0;
 			conteo_color<=conteo_color+1;
@@ -377,34 +411,45 @@ begin
 	end if;
 end process;
 --Proceso para el control de la maquina de estado del mensaje a mostrar
-display:process(grado,caracter1,caracter2,caracter3,caracter4)
+display:process(grado,caracter1,caracter2,caracter3,caracter4,move1,move2)
 begin
-	if(grado>0 and grado<60)then--Caracter 1
+	if(grado>0 and grado<45)then--Caracter 1
 		led<=caracter1(0);
-	elsif(grado>60 and grado<120)then
+		movled<=move1;
+	elsif(grado>45 and grado<90)then
 		led<=caracter1(1);
-	elsif(grado>120 and grado<180)then
+		movled<=move2;
+	elsif(grado>90 and grado<135)then
 		led<=caracter1(2);
-	elsif(grado>280 and grado<340)then--Caracter 2
+	elsif(grado>135 and grado<180)then
+		led<=caracter1(3);
+	elsif(grado>280 and grado<325)then--Caracter 2
 		led<=caracter2(0);
-	elsif(grado>340 and grado<400)then
+	elsif(grado>325 and grado<370)then
 		led<=caracter2(1);
-	elsif(grado>400 and grado<460)then
+	elsif(grado>370 and grado<415)then
 		led<=caracter2(2);
-	elsif(grado>560 and grado<620)then--Caracter 3
+	elsif(grado>415 and grado<460)then
+		led<=caracter2(3);
+	elsif(grado>560 and grado<605)then--Caracter 3
 		led<=caracter3(0);
-	elsif(grado>620 and grado<680)then
+	elsif(grado>605 and grado<650)then
 		led<=caracter3(1);
-	elsif(grado>680 and grado<740)then
+	elsif(grado>650 and grado<695)then
 		led<=caracter3(2);
-	elsif(grado>840 and grado<900)then--Caracter 4
+	elsif(grado>695 and grado<740)then
+		led<=caracter3(3);
+	elsif(grado>840 and grado<885)then--Caracter 4
 		led<=caracter4(0);
-	elsif(grado>900 and grado<960)then
+	elsif(grado>885 and grado<930)then
 		led<=caracter4(1);
-	elsif(grado>960 and grado<1020)then
+	elsif(grado>930 and grado<975)then
 		led<=caracter4(2);
+	elsif(grado>975 and grado<1020)then
+		led<=caracter4(3);
 	else
-		led<="0000000000";
+		led<="000000";
+		movled<="0000";
 	end if;
 end process;
 
