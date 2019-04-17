@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: main.prj
 
@@ -105,7 +105,8 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "C:/Users/Luis Hernandez/Documents/Proyecto E3/pruebas_pov/main.vhd" in Library work.
-Architecture behavioral of Entity main is up to date.
+Entity <main> compiled.
+Entity <main> (Architecture <behavioral>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -128,16 +129,12 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <main>.
     Related source file is "C:/Users/Luis Hernandez/Documents/Proyecto E3/pruebas_pov/main.vhd".
-WARNING:Xst:653 - Signal <move2> is used but never assigned. This sourceless signal will be automatically connected to value 0000.
-WARNING:Xst:653 - Signal <move1> is used but never assigned. This sourceless signal will be automatically connected to value 0000.
 WARNING:Xst:1781 - Signal <caracteres<9>> is used but never assigned. Tied to default value.
 WARNING:Xst:1781 - Signal <caracteres<8>> is used but never assigned. Tied to default value.
 WARNING:Xst:1781 - Signal <caracteres<7>> is used but never assigned. Tied to default value.
 WARNING:Xst:1781 - Signal <caracteres<6>> is used but never assigned. Tied to default value.
 WARNING:Xst:1781 - Signal <caracteres<5>> is used but never assigned. Tied to default value.
 WARNING:Xst:1781 - Signal <caracteres<4>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <caracteres<41>> is used but never assigned. Tied to default value.
-WARNING:Xst:1781 - Signal <caracteres<40>> is used but never assigned. Tied to default value.
 WARNING:Xst:1781 - Signal <caracteres<3>> is used but never assigned. Tied to default value.
 WARNING:Xst:1781 - Signal <caracteres<39>> is used but never assigned. Tied to default value.
 WARNING:Xst:1781 - Signal <caracteres<38>> is used but never assigned. Tied to default value.
@@ -172,54 +169,97 @@ WARNING:Xst:1781 - Signal <caracteres<12>> is used but never assigned. Tied to d
 WARNING:Xst:1781 - Signal <caracteres<11>> is used but never assigned. Tied to default value.
 WARNING:Xst:1781 - Signal <caracteres<10>> is used but never assigned. Tied to default value.
 WARNING:Xst:1781 - Signal <caracteres<0>> is used but never assigned. Tied to default value.
-WARNING:Xst:737 - Found 4-bit latch for signal <movled>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-    Found 5x3-bit ROM for signal <salida_color$mux0000> created at line 380.
-    Found 42x4-bit ROM for signal <$rom0000>.
+    Found 10x24-bit ROM for signal <unidades$rom0000>.
+    Found 10x24-bit ROM for signal <decenas$rom0000>.
+    Found 5x3-bit ROM for signal <salida_color$mux0000> created at line 370.
+    Found 40x4-bit ROM for signal <$rom0000>.
+WARNING:Xst:737 - Found 6-bit latch for signal <caracter3_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 6-bit latch for signal <caracter3_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 6-bit latch for signal <caracter3_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 6-bit latch for signal <caracter3_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 6-bit latch for signal <caracter4_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 6-bit latch for signal <caracter4_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 6-bit latch for signal <caracter4_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 6-bit latch for signal <caracter4_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
     Found 3-bit register for signal <salida_color>.
-    Found 32-bit comparator less for signal <$cmp_lt0000> created at line 372.
+    Found 4-bit up counter for signal <centenas>.
+    Found 4-bit comparator lessequal for signal <centenas$cmp_le0000> created at line 415.
     Found 11-bit up counter for signal <cont>.
+    Found 31-bit up counter for signal <contador>.
     Found 32-bit up counter for signal <Conteo>.
     Found 32-bit up counter for signal <conteo_caracteres>.
     Found 32-bit up counter for signal <conteo_color>.
-    Found 32-bit comparator greatequal for signal <conteo_color$cmp_ge0000> created at line 377.
+    Found 32-bit comparator greatequal for signal <conteo_color$cmp_ge0000> created at line 367.
+    Found 14-bit up counter for signal <counting>.
+    Found 4-bit up counter for signal <decenas>.
+    Found 4-bit comparator lessequal for signal <decenas$cmp_le0000> created at line 410.
+    Found 1-bit register for signal <flag>.
+    Found 31-bit comparator greater for signal <flag$cmp_gt0000> created at line 391.
     Found 31-bit up counter for signal <grado>.
-    Found 31-bit comparator greater for signal <led$cmp_gt0000> created at line 416.
-    Found 31-bit comparator greater for signal <led$cmp_gt0001> created at line 418.
-    Found 31-bit comparator greater for signal <led$cmp_gt0002> created at line 421.
-    Found 31-bit comparator greater for signal <led$cmp_gt0003> created at line 423.
-    Found 31-bit comparator greater for signal <led$cmp_gt0004> created at line 425.
-    Found 31-bit comparator greater for signal <led$cmp_gt0005> created at line 427.
-    Found 31-bit comparator greater for signal <led$cmp_gt0006> created at line 429.
-    Found 31-bit comparator greater for signal <led$cmp_gt0007> created at line 431.
-    Found 31-bit comparator greater for signal <led$cmp_gt0008> created at line 433.
-    Found 31-bit comparator greater for signal <led$cmp_gt0009> created at line 435.
-    Found 31-bit comparator greater for signal <led$cmp_gt0010> created at line 437.
-    Found 31-bit comparator greater for signal <led$cmp_gt0011> created at line 439.
-    Found 31-bit comparator greater for signal <led$cmp_gt0012> created at line 441.
-    Found 31-bit comparator greater for signal <led$cmp_gt0013> created at line 443.
-    Found 31-bit comparator greater for signal <led$cmp_gt0014> created at line 445.
-    Found 31-bit comparator greater for signal <led$cmp_gt0015> created at line 447.
-    Found 31-bit comparator less for signal <led$cmp_lt0000> created at line 416.
-    Found 31-bit comparator less for signal <led$cmp_lt0001> created at line 418.
-    Found 31-bit comparator less for signal <led$cmp_lt0002> created at line 421.
-    Found 31-bit comparator less for signal <led$cmp_lt0003> created at line 423.
-    Found 31-bit comparator less for signal <led$cmp_lt0004> created at line 425.
-    Found 31-bit comparator less for signal <led$cmp_lt0005> created at line 427.
-    Found 31-bit comparator less for signal <led$cmp_lt0006> created at line 429.
-    Found 31-bit comparator less for signal <led$cmp_lt0007> created at line 431.
-    Found 31-bit comparator less for signal <led$cmp_lt0008> created at line 433.
-    Found 31-bit comparator less for signal <led$cmp_lt0009> created at line 435.
-    Found 31-bit comparator less for signal <led$cmp_lt0010> created at line 437.
-    Found 31-bit comparator less for signal <led$cmp_lt0011> created at line 439.
-    Found 31-bit comparator less for signal <led$cmp_lt0012> created at line 441.
-    Found 31-bit comparator less for signal <led$cmp_lt0013> created at line 443.
-    Found 31-bit comparator less for signal <led$cmp_lt0014> created at line 445.
-    Found 31-bit comparator less for signal <led$cmp_lt0015> created at line 447.
+    Found 31-bit comparator greater for signal <led$cmp_gt0000> created at line 498.
+    Found 31-bit comparator greater for signal <led$cmp_gt0001> created at line 499.
+    Found 31-bit comparator greater for signal <led$cmp_gt0002> created at line 501.
+    Found 31-bit comparator greater for signal <led$cmp_gt0003> created at line 503.
+    Found 31-bit comparator greater for signal <led$cmp_gt0004> created at line 505.
+    Found 31-bit comparator greater for signal <led$cmp_gt0005> created at line 507.
+    Found 31-bit comparator greater for signal <led$cmp_gt0006> created at line 509.
+    Found 31-bit comparator greater for signal <led$cmp_gt0007> created at line 511.
+    Found 31-bit comparator greater for signal <led$cmp_gt0008> created at line 513.
+    Found 31-bit comparator greater for signal <led$cmp_gt0009> created at line 515.
+    Found 31-bit comparator greater for signal <led$cmp_gt0010> created at line 517.
+    Found 31-bit comparator greater for signal <led$cmp_gt0011> created at line 519.
+    Found 31-bit comparator greater for signal <led$cmp_gt0012> created at line 521.
+    Found 31-bit comparator greater for signal <led$cmp_gt0013> created at line 523.
+    Found 31-bit comparator greater for signal <led$cmp_gt0014> created at line 525.
+    Found 31-bit comparator greater for signal <led$cmp_gt0015> created at line 527.
+    Found 31-bit comparator greater for signal <led$cmp_gt0016> created at line 529.
+    Found 31-bit comparator greater for signal <led$cmp_gt0017> created at line 531.
+    Found 31-bit comparator greater for signal <led$cmp_gt0018> created at line 533.
+    Found 31-bit comparator greater for signal <led$cmp_gt0019> created at line 535.
+    Found 31-bit comparator greater for signal <led$cmp_gt0020> created at line 537.
+    Found 31-bit comparator greater for signal <led$cmp_gt0021> created at line 539.
+    Found 31-bit comparator greater for signal <led$cmp_gt0022> created at line 541.
+    Found 31-bit comparator greater for signal <led$cmp_gt0023> created at line 543.
+    Found 31-bit comparator less for signal <led$cmp_lt0000> created at line 498.
+    Found 31-bit comparator less for signal <led$cmp_lt0001> created at line 499.
+    Found 31-bit comparator less for signal <led$cmp_lt0002> created at line 501.
+    Found 31-bit comparator less for signal <led$cmp_lt0003> created at line 503.
+    Found 31-bit comparator less for signal <led$cmp_lt0004> created at line 505.
+    Found 31-bit comparator less for signal <led$cmp_lt0005> created at line 507.
+    Found 31-bit comparator less for signal <led$cmp_lt0006> created at line 509.
+    Found 31-bit comparator less for signal <led$cmp_lt0007> created at line 511.
+    Found 31-bit comparator less for signal <led$cmp_lt0008> created at line 513.
+    Found 31-bit comparator less for signal <led$cmp_lt0009> created at line 515.
+    Found 31-bit comparator less for signal <led$cmp_lt0010> created at line 517.
+    Found 31-bit comparator less for signal <led$cmp_lt0011> created at line 519.
+    Found 31-bit comparator less for signal <led$cmp_lt0012> created at line 521.
+    Found 31-bit comparator less for signal <led$cmp_lt0013> created at line 523.
+    Found 31-bit comparator less for signal <led$cmp_lt0014> created at line 525.
+    Found 31-bit comparator less for signal <led$cmp_lt0015> created at line 527.
+    Found 31-bit comparator less for signal <led$cmp_lt0016> created at line 529.
+    Found 31-bit comparator less for signal <led$cmp_lt0017> created at line 531.
+    Found 31-bit comparator less for signal <led$cmp_lt0018> created at line 533.
+    Found 31-bit comparator less for signal <led$cmp_lt0019> created at line 535.
+    Found 31-bit comparator less for signal <led$cmp_lt0020> created at line 537.
+    Found 31-bit comparator less for signal <led$cmp_lt0021> created at line 539.
+    Found 31-bit comparator less for signal <led$cmp_lt0022> created at line 541.
+    Found 31-bit comparator less for signal <led$cmp_lt0023> created at line 543.
+    Found 32-bit comparator less for signal <salida_color$cmp_lt0000> created at line 362.
+    Found 4-bit up counter for signal <unidades>.
+    Found 4-bit comparator lessequal for signal <unidades$cmp_le0000> created at line 405.
     Summary:
-	inferred   2 ROM(s).
-	inferred   5 Counter(s).
-	inferred  99 D-type flip-flop(s).
-	inferred  34 Comparator(s).
+	inferred   4 ROM(s).
+	inferred  10 Counter(s).
+	inferred  52 D-type flip-flop(s).
+	inferred  54 Comparator(s).
 Unit <main> synthesized.
 
 
@@ -227,23 +267,27 @@ Unit <main> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 2
- 42x4-bit ROM                                          : 1
+# ROMs                                                 : 4
+ 10x24-bit ROM                                         : 2
+ 40x4-bit ROM                                          : 1
  5x3-bit ROM                                           : 1
-# Counters                                             : 5
+# Counters                                             : 9
  11-bit up counter                                     : 1
- 31-bit up counter                                     : 1
+ 14-bit up counter                                     : 1
+ 31-bit up counter                                     : 2
  32-bit up counter                                     : 3
-# Registers                                            : 97
- 1-bit register                                        : 96
+ 4-bit up counter                                      : 2
+# Registers                                            : 50
+ 1-bit register                                        : 49
  3-bit register                                        : 1
-# Latches                                              : 1
- 4-bit latch                                           : 1
-# Comparators                                          : 34
- 31-bit comparator greater                             : 16
- 31-bit comparator less                                : 16
+# Latches                                              : 8
+ 6-bit latch                                           : 8
+# Comparators                                          : 53
+ 31-bit comparator greater                             : 25
+ 31-bit comparator less                                : 24
  32-bit comparator greatequal                          : 1
  32-bit comparator less                                : 1
+ 4-bit comparator lessequal                            : 2
 
 =========================================================================
 
@@ -260,44 +304,56 @@ Unit <main> synthesized (advanced).
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# ROMs                                                 : 2
- 42x4-bit ROM                                          : 1
+# ROMs                                                 : 4
+ 10x24-bit ROM                                         : 2
+ 40x4-bit ROM                                          : 1
  5x3-bit ROM                                           : 1
-# Counters                                             : 5
+# Counters                                             : 9
  11-bit up counter                                     : 1
- 31-bit up counter                                     : 1
+ 14-bit up counter                                     : 1
+ 31-bit up counter                                     : 2
  32-bit up counter                                     : 3
-# Registers                                            : 99
- Flip-Flops                                            : 99
-# Latches                                              : 1
- 4-bit latch                                           : 1
-# Comparators                                          : 34
- 31-bit comparator greater                             : 16
- 31-bit comparator less                                : 16
+ 4-bit up counter                                      : 2
+# Registers                                            : 52
+ Flip-Flops                                            : 52
+# Latches                                              : 8
+ 6-bit latch                                           : 8
+# Comparators                                          : 53
+ 31-bit comparator greater                             : 25
+ 31-bit comparator less                                : 24
  32-bit comparator greatequal                          : 1
  32-bit comparator less                                : 1
+ 4-bit comparator lessequal                            : 2
 
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1710 - FF/Latch <caracter4_1_1> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <caracter4_1_4> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <caracter3_1_1> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <caracter3_1_4> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <caracter3_2_1> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <caracter3_2_4> 
+INFO:Xst:2261 - The FF/Latch <caracter3_3_0> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <caracter3_3_2> 
+INFO:Xst:2261 - The FF/Latch <caracter4_3_3> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <caracter4_3_4> 
+INFO:Xst:2261 - The FF/Latch <caracter3_3_3> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <caracter3_3_4> 
+INFO:Xst:2261 - The FF/Latch <caracter4_2_1> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <caracter4_2_4> 
+INFO:Xst:2261 - The FF/Latch <caracter3_0_3> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <caracter3_0_4> 
+INFO:Xst:2261 - The FF/Latch <caracter4_2_5> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <caracter4_1_5> 
+INFO:Xst:2261 - The FF/Latch <caracter4_0_3> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <caracter4_0_4> 
+INFO:Xst:2261 - The FF/Latch <caracter3_0_0> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <caracter3_0_5> 
+INFO:Xst:2261 - The FF/Latch <caracter3_2_5> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <caracter3_1_5> 
+INFO:Xst:2261 - The FF/Latch <caracter4_0_0> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <caracter4_0_5> 
+INFO:Xst:2261 - The FF/Latch <caracter4_3_0> in Unit <main> is equivalent to the following FF/Latch, which will be removed : <caracter4_3_2> 
 
 Optimizing unit <main> ...
-WARNING:Xst:1710 - FF/Latch <movled_0> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <movled_1> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <movled_2> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <movled_3> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <movled_0> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <movled_1> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <movled_2> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <movled_3> (without init value) has a constant value of 0 in block <main>. This FF/Latch will be trimmed during the optimization process.
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 105.
+Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 107.
 Optimizing block <main> to meet ratio 100 (+ 5) of 704 slices :
-Area constraint is met for block <main>, final ratio is 96.
+Area constraint is met for block <main>, final ratio is 98.
 
 Final Macro Processing ...
 
@@ -305,8 +361,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 237
- Flip-Flops                                            : 237
+# Registers                                            : 243
+ Flip-Flops                                            : 243
 
 =========================================================================
 
@@ -332,36 +388,37 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 15
+# IOs                              : 11
 
 Cell Usage :
-# BELS                             : 2028
+# BELS                             : 2364
 #      GND                         : 1
-#      INV                         : 74
-#      LUT1                        : 189
-#      LUT2                        : 56
-#      LUT2_D                      : 4
-#      LUT2_L                      : 1
-#      LUT3                        : 151
-#      LUT3_D                      : 14
+#      INV                         : 105
+#      LUT1                        : 271
+#      LUT2                        : 97
+#      LUT2_D                      : 3
+#      LUT2_L                      : 3
+#      LUT3                        : 81
+#      LUT3_D                      : 2
 #      LUT3_L                      : 3
-#      LUT4                        : 685
-#      LUT4_D                      : 33
-#      LUT4_L                      : 26
-#      MUXCY                       : 520
-#      MUXF5                       : 125
-#      MUXF6                       : 7
+#      LUT4                        : 677
+#      LUT4_D                      : 15
+#      LUT4_L                      : 18
+#      MUXCY                       : 874
+#      MUXF5                       : 26
+#      MUXF6                       : 4
 #      VCC                         : 1
-#      XORCY                       : 138
-# FlipFlops/Latches                : 237
-#      FDE                         : 99
-#      FDR                         : 43
-#      FDRE                        : 95
+#      XORCY                       : 183
+# FlipFlops/Latches                : 275
+#      FDE                         : 82
+#      FDR                         : 57
+#      FDRE                        : 104
+#      LD                          : 32
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 14
+# IO Buffers                       : 10
 #      IBUF                        : 1
-#      OBUF                        : 13
+#      OBUF                        : 9
 =========================================================================
 
 Device utilization summary:
@@ -369,11 +426,11 @@ Device utilization summary:
 
 Selected Device : 3s50atq144-5 
 
- Number of Slices:                      649  out of    704    92%  
- Number of Slice Flip Flops:            237  out of   1408    16%  
- Number of 4 input LUTs:               1236  out of   1408    87%  
- Number of IOs:                          15
- Number of bonded IOBs:                  15  out of    108    13%  
+ Number of Slices:                      692  out of    704    98%  
+ Number of Slice Flip Flops:            275  out of   1408    19%  
+ Number of 4 input LUTs:               1275  out of   1408    90%  
+ Number of IOs:                          11
+ Number of bonded IOBs:                  11  out of    108    10%  
  Number of GCLKs:                         1  out of     24     4%  
 
 ---------------------------
@@ -394,11 +451,17 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-Clk                                | BUFGP                  | 237   |
------------------------------------+------------------------+-------+
+-----------------------------------------+------------------------+-------+
+Clock Signal                             | Clock buffer(FF name)  | Load  |
+-----------------------------------------+------------------------+-------+
+Clk                                      | BUFGP                  | 243   |
+caracter4_0_or0000(caracter4_0_or00001:O)| NONE(*)(caracter4_3_0) | 16    |
+caracter3_0_or0000(caracter3_0_or00001:O)| NONE(*)(caracter3_3_0) | 16    |
+-----------------------------------------+------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -408,9 +471,9 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 8.409ns (Maximum Frequency: 118.920MHz)
-   Minimum input arrival time before clock: 3.317ns
-   Maximum output required time after clock: 24.562ns
+   Minimum period: 8.197ns (Maximum Frequency: 121.995MHz)
+   Minimum input arrival time before clock: 4.251ns
+   Maximum output required time after clock: 21.756ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -419,113 +482,181 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'Clk'
-  Clock period: 8.409ns (frequency: 118.920MHz)
-  Total number of paths / destination ports: 31893 / 569
+  Clock period: 8.197ns (frequency: 121.995MHz)
+  Total number of paths / destination ports: 29135 / 590
 -------------------------------------------------------------------------
-Delay:               8.409ns (Levels of Logic = 13)
-  Source:            conteo_caracteres_31 (FF)
-  Destination:       caracter2<3>_5 (FF)
+Delay:               8.197ns (Levels of Logic = 17)
+  Source:            conteo_caracteres_26 (FF)
+  Destination:       caracter2<0>_3 (FF)
   Source Clock:      Clk rising
   Destination Clock: Clk rising
 
-  Data Path: conteo_caracteres_31 to caracter2<3>_5
+  Data Path: conteo_caracteres_26 to caracter2<0>_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             3   0.495   0.559  conteo_caracteres_31 (conteo_caracteres_31)
-     LUT2:I0->O            1   0.561   0.000  _mux000214_wg_lut<0> (_mux000214_wg_lut<0>)
-     MUXCY:S->O            1   0.523   0.000  _mux000214_wg_cy<0> (_mux000214_wg_cy<0>)
-     MUXCY:CI->O           1   0.065   0.000  _mux000214_wg_cy<1> (_mux000214_wg_cy<1>)
-     MUXCY:CI->O           1   0.065   0.000  _mux000214_wg_cy<2> (_mux000214_wg_cy<2>)
-     MUXCY:CI->O           1   0.065   0.000  _mux000214_wg_cy<3> (_mux000214_wg_cy<3>)
-     MUXCY:CI->O           1   0.065   0.000  _mux000214_wg_cy<4> (_mux000214_wg_cy<4>)
-     MUXCY:CI->O           1   0.065   0.000  _mux000214_wg_cy<5> (_mux000214_wg_cy<5>)
-     MUXCY:CI->O         170   0.179   1.176  _mux000214_wg_cy<6> (_mux0002_bdd13)
-     LUT2:I1->O           75   0.562   1.086  _mux0002261 (_mux0002_bdd53)
-     LUT4:I3->O            3   0.561   0.474  _mux003621 (_mux0036_bdd0)
-     LUT3:I2->O            1   0.561   0.000  _mux0044120_G (N645)
-     MUXF5:I1->O           1   0.229   0.359  _mux0044120 (_mux0044120)
-     LUT4:I3->O            1   0.561   0.000  _mux00441154 (_mux0044)
-     FDE:D                     0.197          caracter2<3>_5
+     FDRE:C->Q             3   0.495   0.559  conteo_caracteres_26 (conteo_caracteres_26)
+     LUT2:I0->O            1   0.561   0.000  conteo_caracteres_cmp_eq00001_wg_lut<0> (conteo_caracteres_cmp_eq00001_wg_lut<0>)
+     MUXCY:S->O            1   0.523   0.000  conteo_caracteres_cmp_eq00001_wg_cy<0> (conteo_caracteres_cmp_eq00001_wg_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  conteo_caracteres_cmp_eq00001_wg_cy<1> (conteo_caracteres_cmp_eq00001_wg_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  conteo_caracteres_cmp_eq00001_wg_cy<2> (conteo_caracteres_cmp_eq00001_wg_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  conteo_caracteres_cmp_eq00001_wg_cy<3> (conteo_caracteres_cmp_eq00001_wg_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  conteo_caracteres_cmp_eq00001_wg_cy<4> (conteo_caracteres_cmp_eq00001_wg_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  conteo_caracteres_cmp_eq00001_wg_cy<5> (conteo_caracteres_cmp_eq00001_wg_cy<5>)
+     MUXCY:CI->O          40   0.179   1.077  conteo_caracteres_cmp_eq00001_wg_cy<6> (conteo_caracteres_cmp_eq00001_wg_cy<6>)
+     LUT4:I3->O           12   0.561   0.819  mux0001_cmp_eq000311 (N105)
+     LUT4:I3->O           18   0.561   0.931  mux0001_cmp_eq00191 (mux0001_cmp_eq0019)
+     LUT3:I2->O            1   0.561   0.000  _mux0003_wg_lut<0> (_mux0003_wg_lut<0>)
+     MUXCY:S->O            1   0.523   0.000  _mux0003_wg_cy<0> (_mux0003_wg_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  _mux0003_wg_cy<1> (_mux0003_wg_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  _mux0003_wg_cy<2> (_mux0003_wg_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  _mux0003_wg_cy<3> (_mux0003_wg_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  _mux0003_wg_cy<4> (_mux0003_wg_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  _mux0003_wg_cy<5> (_mux0003)
+     FDE:D                     0.197          caracter2<0>_3
     ----------------------------------------
-    Total                      8.409ns (4.754ns logic, 3.655ns route)
-                                       (56.5% logic, 43.5% route)
+    Total                      8.197ns (4.811ns logic, 3.386ns route)
+                                       (58.7% logic, 41.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'Clk'
-  Total number of paths / destination ports: 31 / 31
+  Total number of paths / destination ports: 49 / 49
 -------------------------------------------------------------------------
-Offset:              3.317ns (Levels of Logic = 2)
+Offset:              4.251ns (Levels of Logic = 3)
   Source:            sensor (PAD)
-  Destination:       grado_0 (FF)
+  Destination:       decenas_0 (FF)
   Destination Clock: Clk rising
 
-  Data Path: sensor to grado_0
+  Data Path: sensor to decenas_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   0.824   0.423  sensor_IBUF (sensor_IBUF)
-     LUT4:I1->O           31   0.562   1.073  grado_and00001 (grado_and0000)
-     FDRE:R                    0.435          grado_0
+     IBUF:I->O             4   0.824   0.607  sensor_IBUF (sensor_IBUF)
+     LUT4:I0->O            9   0.561   0.763  decenas_and00001 (decenas_not0001)
+     LUT4:I1->O            4   0.562   0.499  decenas_and0000 (decenas_and0000)
+     FDRE:R                    0.435          decenas_0
     ----------------------------------------
-    Total                      3.317ns (1.821ns logic, 1.496ns route)
-                                       (54.9% logic, 45.1% route)
+    Total                      4.251ns (2.382ns logic, 1.869ns route)
+                                       (56.0% logic, 44.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'Clk'
-  Total number of paths / destination ports: 5865 / 9
+  Total number of paths / destination ports: 15520 / 9
 -------------------------------------------------------------------------
-Offset:              24.562ns (Levels of Logic = 26)
-  Source:            grado_2 (FF)
-  Destination:       led<5> (PAD)
+Offset:              21.756ns (Levels of Logic = 30)
+  Source:            grado_1 (FF)
+  Destination:       led<2> (PAD)
   Source Clock:      Clk rising
 
-  Data Path: grado_2 to led<5>
+  Data Path: grado_1 to led<2>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q            29   0.495   1.180  grado_2 (grado_2)
-     LUT4:I0->O            1   0.561   0.000  Mcompar_led_cmp_lt0000_lut<0>4 (Mcompar_led_cmp_lt0000_lut<0>4)
-     MUXCY:S->O            1   0.523   0.000  Mcompar_led_cmp_lt0000_cy<0>_13 (Mcompar_led_cmp_lt0000_cy<0>14)
-     MUXCY:CI->O           1   0.065   0.000  Mcompar_led_cmp_lt0000_cy<1>_13 (Mcompar_led_cmp_lt0000_cy<1>14)
-     MUXCY:CI->O           1   0.065   0.000  Mcompar_led_cmp_lt0000_cy<2>_13 (Mcompar_led_cmp_lt0000_cy<2>14)
-     MUXCY:CI->O           1   0.065   0.000  Mcompar_led_cmp_lt0000_cy<3>_13 (Mcompar_led_cmp_lt0000_cy<3>14)
-     MUXCY:CI->O           1   0.065   0.000  Mcompar_led_cmp_lt0000_cy<4>_13 (Mcompar_led_cmp_lt0000_cy<4>14)
-     MUXCY:CI->O           1   0.065   0.000  Mcompar_led_cmp_lt0000_cy<5>_13 (Mcompar_led_cmp_lt0000_cy<5>14)
-     MUXCY:CI->O           1   0.065   0.000  Mcompar_led_cmp_lt0000_cy<6>_13 (Mcompar_led_cmp_lt0000_cy<6>14)
-     MUXCY:CI->O           6   0.179   0.635  Mcompar_led_cmp_lt0000_cy<7>_13 (Mcompar_led_cmp_lt0000_cy<7>14)
-     LUT3:I1->O            1   0.562   0.359  led<5>191_SW0 (N750)
-     LUT4:I3->O            1   0.561   0.465  led<5>191 (led<5>_bdd34)
-     LUT4:I0->O            1   0.561   0.465  led<5>181 (led<5>_bdd32)
-     LUT4:I0->O            1   0.561   0.465  led<5>171 (led<5>_bdd30)
-     LUT4:I0->O            1   0.561   0.465  led<5>12_SW0_SW0 (N782)
-     LUT4:I0->O            1   0.561   0.465  led<5>12_SW0 (N736)
-     LUT4:I0->O            1   0.561   0.465  led<5>91_SW0_SW0_SW0 (N796)
-     LUT4:I0->O            1   0.561   0.465  led<5>91_SW0_SW0 (N748)
-     LUT4:I0->O            1   0.561   0.465  led<5>6_SW0_SW0 (N772)
-     LUT4:I0->O            1   0.561   0.465  led<5>6_SW0 (N704)
-     LUT4:I0->O            1   0.561   0.465  led<5>6 (led<5>_bdd8)
-     LUT4:I0->O            1   0.561   0.465  led<5>51 (led<5>_bdd6)
-     LUT4:I0->O            1   0.561   0.465  led<5>41 (led<5>_bdd4)
-     LUT4:I0->O            1   0.561   0.465  led<5>31 (led<5>_bdd2)
-     LUT4:I0->O            1   0.561   0.465  led<5>21 (led<5>_bdd0)
-     LUT4:I0->O            1   0.561   0.357  led<5>11 (led_5_OBUF)
-     OBUF:I->O                 4.396          led_5_OBUF (led<5>)
+     FDRE:C->Q            37   0.495   1.182  grado_1 (grado_1)
+     LUT1:I0->O            1   0.561   0.000  Mcompar_led_cmp_gt0000_cy<1>_19_rt (Mcompar_led_cmp_gt0000_cy<1>_19_rt)
+     MUXCY:S->O            1   0.523   0.000  Mcompar_led_cmp_gt0000_cy<1>_19 (Mcompar_led_cmp_gt0000_cy<1>20)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_led_cmp_gt0000_cy<2>_19 (Mcompar_led_cmp_gt0000_cy<2>20)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_led_cmp_gt0000_cy<3>_19 (Mcompar_led_cmp_gt0000_cy<3>20)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_led_cmp_gt0000_cy<4>_19 (Mcompar_led_cmp_gt0000_cy<4>20)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_led_cmp_gt0000_cy<5>_19 (Mcompar_led_cmp_gt0000_cy<5>20)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_led_cmp_gt0000_cy<6>_19 (Mcompar_led_cmp_gt0000_cy<6>20)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_led_cmp_gt0000_cy<7>_19 (Mcompar_led_cmp_gt0000_cy<7>20)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_led_cmp_gt0000_cy<8>_15 (Mcompar_led_cmp_gt0000_cy<8>16)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_led_cmp_gt0000_cy<9>_14 (Mcompar_led_cmp_gt0000_cy<9>15)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_led_cmp_gt0000_cy<10>_12 (Mcompar_led_cmp_gt0000_cy<10>13)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_led_cmp_gt0000_cy<11>_9 (Mcompar_led_cmp_gt0000_cy<11>10)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_led_cmp_gt0000_cy<12>_1 (Mcompar_led_cmp_gt0000_cy<12>2)
+     MUXCY:CI->O           1   0.065   0.000  Mcompar_led_cmp_gt0000_cy<13>_0 (Mcompar_led_cmp_gt0000_cy<13>1)
+     MUXCY:CI->O           3   0.179   0.559  Mcompar_led_cmp_gt0000_cy<14> (Mcompar_led_cmp_gt0000_cy<14>)
+     LUT2:I0->O            6   0.561   0.571  led_and00201 (led_and0020)
+     LUT4:I3->O            1   0.561   0.380  led<4>111_SW1 (N360)
+     LUT4:I2->O            6   0.561   0.571  led<4>111 (N73)
+     LUT4:I3->O            1   0.561   0.380  led<2>39 (led<2>39)
+     LUT4:I2->O            1   0.561   0.423  led<2>84_SW0 (N336)
+     LUT4:I1->O            1   0.562   0.380  led<2>84 (led<2>84)
+     LUT4:I2->O            1   0.561   0.465  led<2>128 (led<2>128)
+     LUT4:I0->O            1   0.561   0.359  led<2>160_SW0 (N264)
+     LUT4:I3->O            1   0.561   0.359  led<2>160 (led<2>160)
+     LUT4:I3->O            1   0.561   0.465  led<2>209_SW0 (N464)
+     LUT4:I0->O            1   0.561   0.423  led<2>209 (led<2>209)
+     LUT4:I1->O            1   0.562   0.000  led<2>297_SW02 (led<2>297_SW01)
+     MUXF5:I0->O           1   0.229   0.423  led<2>297_SW0_f5 (N320)
+     LUT4:I1->O            1   0.562   0.357  led<2>297 (led_2_OBUF)
+     OBUF:I->O                 4.396          led_2_OBUF (led<2>)
     ----------------------------------------
-    Total                     24.562ns (15.521ns logic, 9.041ns route)
-                                       (63.2% logic, 36.8% route)
+    Total                     21.756ns (14.459ns logic, 7.297ns route)
+                                       (66.5% logic, 33.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'caracter3_0_or0000'
+  Total number of paths / destination ports: 21 / 6
+-------------------------------------------------------------------------
+Offset:              14.342ns (Levels of Logic = 11)
+  Source:            caracter3_3_0 (LATCH)
+  Destination:       led<2> (PAD)
+  Source Clock:      caracter3_0_or0000 falling
+
+  Data Path: caracter3_3_0 to led<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               2   0.629   0.382  caracter3_3_0 (caracter3_3_0)
+     LUT4:I3->O            1   0.561   0.423  led<2>84_SW0 (N336)
+     LUT4:I1->O            1   0.562   0.380  led<2>84 (led<2>84)
+     LUT4:I2->O            1   0.561   0.465  led<2>128 (led<2>128)
+     LUT4:I0->O            1   0.561   0.359  led<2>160_SW0 (N264)
+     LUT4:I3->O            1   0.561   0.359  led<2>160 (led<2>160)
+     LUT4:I3->O            1   0.561   0.465  led<2>209_SW0 (N464)
+     LUT4:I0->O            1   0.561   0.423  led<2>209 (led<2>209)
+     LUT4:I1->O            1   0.562   0.000  led<2>297_SW02 (led<2>297_SW01)
+     MUXF5:I0->O           1   0.229   0.423  led<2>297_SW0_f5 (N320)
+     LUT4:I1->O            1   0.562   0.357  led<2>297 (led_2_OBUF)
+     OBUF:I->O                 4.396          led_2_OBUF (led<2>)
+    ----------------------------------------
+    Total                     14.342ns (10.306ns logic, 4.036ns route)
+                                       (71.9% logic, 28.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'caracter4_0_or0000'
+  Total number of paths / destination ports: 22 / 6
+-------------------------------------------------------------------------
+Offset:              15.410ns (Levels of Logic = 12)
+  Source:            caracter4_2_2 (LATCH)
+  Destination:       led<2> (PAD)
+  Source Clock:      caracter4_0_or0000 falling
+
+  Data Path: caracter4_2_2 to led<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               1   0.629   0.465  caracter4_2_2 (caracter4_2_2)
+     LUT4:I0->O            1   0.561   0.423  led<2>34 (led<2>34)
+     LUT4:I1->O            1   0.562   0.423  led<2>84_SW0 (N336)
+     LUT4:I1->O            1   0.562   0.380  led<2>84 (led<2>84)
+     LUT4:I2->O            1   0.561   0.465  led<2>128 (led<2>128)
+     LUT4:I0->O            1   0.561   0.359  led<2>160_SW0 (N264)
+     LUT4:I3->O            1   0.561   0.359  led<2>160 (led<2>160)
+     LUT4:I3->O            1   0.561   0.465  led<2>209_SW0 (N464)
+     LUT4:I0->O            1   0.561   0.423  led<2>209 (led<2>209)
+     LUT4:I1->O            1   0.562   0.000  led<2>297_SW02 (led<2>297_SW01)
+     MUXF5:I0->O           1   0.229   0.423  led<2>297_SW0_f5 (N320)
+     LUT4:I1->O            1   0.562   0.357  led<2>297 (led_2_OBUF)
+     OBUF:I->O                 4.396          led_2_OBUF (led<2>)
+    ----------------------------------------
+    Total                     15.410ns (10.868ns logic, 4.542ns route)
+                                       (70.5% logic, 29.5% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 13.00 secs
-Total CPU time to Xst completion: 12.72 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.40 secs
  
 --> 
 
-Total memory usage is 4568296 kilobytes
+Total memory usage is 4567236 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   53 (   0 filtered)
-Number of infos    :    1 (   0 filtered)
+Number of warnings :   52 (   0 filtered)
+Number of infos    :   22 (   0 filtered)
 
