@@ -38,6 +38,7 @@ entity main is
 			  Clk:		in		std_logic;
 			  salida_color: out std_logic_vector(2 downto 0);
 			  led : out  std_logic_vector(5 downto 0);
+			  movled:out std_logic_vector(2 downto 0);
 			  sensor:in std_logic
 	);
 end main;
@@ -47,7 +48,7 @@ architecture Behavioral of main is
 --Declaracion de maquinas de estado
 type memoria is array (0 to 3) of std_logic_vector(5 downto 0);
 type colores is array (0 to 4) of std_logic_vector(2 downto 0);
-type mensaje is array(0 to 39) of memoria;
+type mensaje is array(0 to 49) of memoria;
 --variables para procesos
 
 signal counting: integer range 0 to 12000;
@@ -65,7 +66,7 @@ signal conteo_caracteres:integer:=0;
 
 
 constant color:colores:=(0=>"001",
-								1=>"010",
+								1=>"011",
 								2=>"100",
 								3=>"110",
 								4=>"011");
@@ -162,9 +163,9 @@ constant i:memoria:=(
 
 constant j:memoria:=(
 							0=>"000000",
-							1=>"100000",
+							1=>"111101",
 							2=>"100000",
-							3=>"111101");	
+							3=>"100000");	
 
 constant cuatro:memoria:=(--quinta tanda
 							0=>"111111",
@@ -209,10 +210,10 @@ constant x:memoria:=(
 							3=>"001001");			
 
 constant g:memoria:=(
-							0=>"111111",
-							1=>"100001",
-							2=>"101001",
-							3=>"111001");
+							0=>"111001",
+							1=>"101001",
+							2=>"100001",
+							3=>"111111");
 
 constant h:memoria:=(--septima tanda
 							0=>"111111",
@@ -221,10 +222,10 @@ constant h:memoria:=(--septima tanda
 							3=>"111111");
 
 constant jmin:memoria:=(
-							0=>"000000",
-							1=>"100001",
-							2=>"111111",
-							3=>"000001");		
+							0=>"000001",
+							1=>"111111",
+							2=>"100001",
+							3=>"100000");		
 			
 
 constant flecha:memoria:=(
@@ -270,10 +271,10 @@ constant flor:memoria:=(
 							3=>"001100");		
 
 constant dmay:memoria:=(
-							0=>"111110",
-							1=>"100010",
-							2=>"010100",
-							3=>"001000");			
+							0=>"001100",
+							1=>"010010",
+							2=>"100001",
+							3=>"111111");			
 						
 							
 constant u:memoria:=(--decima tanda
@@ -294,11 +295,11 @@ constant cinco:memoria:=(
 							2=>"100101",
 							3=>"100111");			
 
-constant encendido:memoria:=(
+constant r:memoria:=(
 							0=>"000000",
-							1=>"010000",
-							2=>"101011",
-							3=>"010000");
+							1=>"111111",
+							2=>"000010",
+							3=>"000010");
 							
 constant tres:memoria:=(--Onceava tanda
 							0=>"111111",
@@ -311,46 +312,56 @@ constant nueve:memoria:=(
 							2=>"000101",
 							3=>"000010");
 
-signal caracteres:mensaje:=(0=>A,
-					1=>L,
-					2=>uno,
-					3=>mas,
-					4=>igual,
-					5=>division,
-					6=>siete,
-					7=>cero,
-					8=>n,
-					9=>c,
-					10=>t,
-					11=>e,
-					12=>p,
-					13=>d,
-					14=>i,
-					15=>j,
-					16=>cuatro,
-					17=>dos,
-					18=>seis,
-					19=>ocho,
-					20=>ene,
-					21=>f,
-					22=>x,
-					23=>g,
-					24=>h,
-					25=>jmin,
-					26=>flecha,
-					27=>z,
-					28=>coma,
-					29=>cuadrado,
-					30=>rectangulo,
-					31=>flor,
-					32=>emin,
-					33=>dmay,
-					34=>u,
-					35=>casita,
-					36=>cinco,
-					37=>encendido,
-					38=>tres,
-					39=>nueve
+signal caracteres:mensaje:=(0=>i,--Arreglo que contiene los caracteres en el orden a mostrar
+					1=>n,
+					2=>i,
+					3=>c,
+					4=>i,
+					5=>cero,
+					6=>dmay,
+					7=>e,
+					8=>c,
+					9=>cero,
+					10=>n,
+					11=>t,
+					12=>A,
+					13=>dmay,
+					14=>cero,
+					15=>r,
+					16=>cero,
+					17=>uno,
+					18=>dos,
+					19=>tres,
+					20=>cuatro,
+					21=>cinco,
+					22=>seis,
+					23=>siete,
+					24=>ocho,
+					25=>nueve,
+					26=>e,
+					27=>L,
+					28=>e,
+					29=>c,
+					30=>t,
+					31=>r,
+					32=>cero,
+					33=>n,
+					34=>i,
+					35=>c,
+					36=>A,
+					37=>tres,
+					38=>u,
+					39=>division,
+					40=>casita,
+					41=>flor,
+					42=>emin,
+					43=>rectangulo,
+					44=>cuadrado,
+					45=>coma,
+					46=>g,
+					47=>flecha,
+					48=>p,
+					49=>j
 					);
 signal caracter1,caracter2,caracter3,caracter4:memoria;
 										
@@ -359,19 +370,26 @@ begin
 reloj_general:process(clk)
 begin
 	if(rising_edge(clk))then
-		if(Conteo<8*11999999)then
+		if(Conteo<8*11999999)then--Cada 8 segundos cambia de letra y color
 			Conteo<=Conteo+1;
-			if(conteo_caracteres=38)then
+			if(Conteo>5*11999999 and Conteo<6*11999999)then
+				movled<="111";
+			elsif(Conteo>6*11999999 and Conteo<7*11999999)then
+				movled<="110";
+			elsif(Conteo>7*11999999 and Conteo<8*11999998)then
+				movled<="100";
+			else
+				movled<="000";
+			end if;
+			if(conteo_caracteres=48)then
 				conteo_caracteres<=0;
 			end if;
 			if(conteo_color>=4)then
 				conteo_color<=0;
 			end if;
-			salida_color<=color(conteo_color);
-			caracter1<=caracteres(conteo_caracteres);
+			salida_color<=color(conteo_color);--conteo_color es el encargado de señalar que color mostrar
+			caracter1<=caracteres(conteo_caracteres);--conteo_caracteres es el encargado de ir en orden mostrando caracteres
 			caracter2<=caracteres(conteo_caracteres+1);
-			--caracter3<=caracteres(conteo_caracteres+2);
-			--caracter4<=caracteres(conteo_caracteres+3);
 		else
 			Conteo<=0;
 			conteo_color<=conteo_color+1;
@@ -381,7 +399,7 @@ begin
 end process;
 
 
-frecuenciometro:	process(clk,sensor)
+frecuenciometro:	process(clk,sensor)--Mostrar la frecuencia a la que se mueve y despliega los caracteres
 		begin
 		if(rising_edge(clk)) then
 					if(counting = 2999) then
@@ -424,7 +442,7 @@ frecuenciometro:	process(clk,sensor)
 					end if;
 		end if;
 end process;
-
+--Proceso para mostrar las unidades y decenas medidas por frecuenciometro
 preparar_numeros:process(unidades,decenas)
 begin
 	case(unidades)is
@@ -477,7 +495,7 @@ begin
 	end case;
 end process;
 
-
+--Divisor de frecuencia para llevar control de la posicion de los led´s
 divider:process(clk,sensor)
 begin
 	if(clk'event and clk = '1')then

@@ -9,37 +9,37 @@ Target Device  : xc3s50a
 Target Package : tq144
 Target Speed   : -5
 Mapper Version : spartan3a -- $Revision: 1.55 $
-Mapped Date    : Wed Apr 17 12:49:36 2019
+Mapped Date    : Mon Apr 22 16:42:14 2019
 
 Design Summary
 --------------
 Number of errors:      0
-Number of warnings:    2
+Number of warnings:    6
 Logic Utilization:
-  Total Number Slice Registers:         275 out of   1,408   19%
-    Number used as Flip Flops:          243
+  Total Number Slice Registers:         276 out of   1,408   19%
+    Number used as Flip Flops:          244
     Number used as Latches:              32
-  Number of 4 input LUTs:             1,019 out of   1,408   72%
+  Number of 4 input LUTs:             1,008 out of   1,408   71%
 Logic Distribution:
-  Number of occupied Slices:            685 out of     704   97%
-    Number of Slices containing only related logic:     685 out of     685 100%
-    Number of Slices containing unrelated logic:          0 out of     685   0%
+  Number of occupied Slices:            679 out of     704   96%
+    Number of Slices containing only related logic:     679 out of     679 100%
+    Number of Slices containing unrelated logic:          0 out of     679   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:       1,292 out of   1,408   91%
-    Number used as logic:             1,019
-    Number used as a route-thru:        273
+  Total Number of 4 input LUTs:       1,310 out of   1,408   93%
+    Number used as logic:             1,008
+    Number used as a route-thru:        302
 
   The Slice Logic Distribution report is not meaningful if the design is
   over-mapped for a non-slice resource or if Placement fails.
 
-  Number of bonded IOBs:                 11 out of     108   10%
+  Number of bonded IOBs:                 14 out of     108   12%
   Number of BUFGMUXs:                     1 out of      24    4%
 
-Average Fanout of Non-Clock Nets:                4.35
+Average Fanout of Non-Clock Nets:                4.30
 
 Peak Memory Usage:  4456 MB
-Total REAL time to MAP completion:  1 secs 
-Total CPU time to MAP completion:   1 secs 
+Total REAL time to MAP completion:  2 secs 
+Total CPU time to MAP completion:   2 secs 
 
 NOTES:
 
@@ -80,6 +80,18 @@ Section 1 - Errors
 
 Section 2 - Warnings
 --------------------
+WARNING:Pack:266 - The function generator Mrom__rom00015 failed to merge with F5
+   multiplexer Mrom__rom00017_f6/MUXF5.I1.  There is a conflict for the GYMUX. 
+   The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator Mrom__rom00015 failed to merge with F5
+   multiplexer Mrom__rom00015_f6/MUXF5.I1.  There is a conflict for the GYMUX. 
+   The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator Mrom__rom00015 failed to merge with F5
+   multiplexer Mrom__rom00018_f6/MUXF5.I1.  There is a conflict for the GYMUX. 
+   The design will exhibit suboptimal timing.
+WARNING:Pack:266 - The function generator Mrom__rom00015 failed to merge with F5
+   multiplexer Mrom__rom00016_f6/MUXF5.I1.  There is a conflict for the GYMUX. 
+   The design will exhibit suboptimal timing.
 WARNING:PhysDesignRules:372 - Gated clock. Clock net caracter3_0_or0000 is
    sourced by a combinatorial pin. This is not good design practice. Use the CE
    pin to control the loading of data into the flip-flop.
@@ -125,6 +137,9 @@ Section 6 - IOB Properties
 | led<3>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
 | led<4>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
 | led<5>                             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| movled<0>                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| movled<1>                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
+| movled<2>                          | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
 | salida_color<0>                    | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
 | salida_color<1>                    | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |
 | salida_color<2>                    | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW    |              |          | 0 / 0    | 3STATE           |

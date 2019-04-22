@@ -36,469 +36,560 @@ INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and
 Timing constraint: NET "Clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 29135 paths analyzed, 963 endpoints analyzed, 0 failing endpoints
+ 18419 paths analyzed, 1074 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is  10.168ns.
+ Minimum period is   9.073ns.
 --------------------------------------------------------------------------------
 
-Paths for end point caracter2<1>_0 (SLICE_X0Y27.BY), 800 paths
+Paths for end point conteo_caracteres_8 (SLICE_X0Y20.SR), 61 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     73.165ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               conteo_caracteres_28 (FF)
-  Destination:          caracter2<1>_0 (FF)
+Slack (setup path):     74.260ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Conteo_6 (FF)
+  Destination:          conteo_caracteres_8 (FF)
   Requirement:          83.333ns
-  Data Path Delay:      10.046ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.122ns (0.263 - 0.385)
+  Data Path Delay:      8.988ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.085ns (0.271 - 0.356)
   Source Clock:         Clk_BUFGP rising at 0.000ns
   Destination Clock:    Clk_BUFGP rising at 83.333ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: conteo_caracteres_28 to caracter2<1>_0
+  Maximum Data Path: Conteo_6 to conteo_caracteres_8
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X2Y30.XQ       Tcko                  0.521   conteo_caracteres<28>
-                                                       conteo_caracteres_28
-    SLICE_X3Y24.G3       net (fanout=3)        1.605   conteo_caracteres<28>
-    SLICE_X3Y24.COUT     Topcyg                1.009   conteo_caracteres_cmp_eq00001_wg_cy<5>
-                                                       conteo_caracteres_cmp_eq00001_wg_lut<5>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<5>
-    SLICE_X3Y25.CIN      net (fanout=1)        0.000   conteo_caracteres_cmp_eq00001_wg_cy<5>
-    SLICE_X3Y25.XB       Tcinxb                0.216   conteo_caracteres_cmp_eq00001_wg_cy<6>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<6>
-    SLICE_X3Y30.G1       net (fanout=40)       0.768   conteo_caracteres_cmp_eq00001_wg_cy<6>
-    SLICE_X3Y30.Y        Tilo                  0.561   mux0001_cmp_eq0018
-                                                       mux0001_cmp_eq000211
-    SLICE_X6Y21.F3       net (fanout=9)        1.779   N107
-    SLICE_X6Y21.X        Tilo                  0.601   mux0001_cmp_eq0030
-                                                       mux0001_cmp_eq00301
-    SLICE_X0Y26.F4       net (fanout=10)       0.850   mux0001_cmp_eq0030
-    SLICE_X0Y26.COUT     Topcyf                1.133   _mux0012_wg_cy<5>
-                                                       _mux0012_wg_lut<4>
-                                                       _mux0012_wg_cy<4>
-                                                       _mux0012_wg_cy<5>
-    SLICE_X0Y27.CIN      net (fanout=1)        0.000   _mux0012_wg_cy<5>
-    SLICE_X0Y27.XB       Tcinxb                0.313   caracter2<1><0>
-                                                       _mux0012_wg_cy<6>
-    SLICE_X0Y27.BY       net (fanout=1)        0.410   _mux0012
-    SLICE_X0Y27.CLK      Tdick                 0.280   caracter2<1><0>
-                                                       caracter2<1>_0
+    SLICE_X6Y3.XQ        Tcko                  0.521   Conteo<6>
+                                                       Conteo_6
+    SLICE_X4Y4.F2        net (fanout=8)        1.438   Conteo<6>
+    SLICE_X4Y4.COUT      Topcyf                1.133   Mcompar_salida_color_cmp_lt0000_cy<1>
+                                                       Mcompar_salida_color_cmp_lt0000_lut<0>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<0>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<1>
+    SLICE_X4Y5.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<1>
+    SLICE_X4Y5.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<3>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<2>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<3>
+    SLICE_X4Y6.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<3>
+    SLICE_X4Y6.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<5>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<4>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<5>
+    SLICE_X4Y7.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<5>
+    SLICE_X4Y7.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<7>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<6>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<7>
+    SLICE_X4Y8.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<7>
+    SLICE_X4Y8.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<9>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<8>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<9>
+    SLICE_X4Y9.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<9>
+    SLICE_X4Y9.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<11>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<10>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<11>
+    SLICE_X4Y10.CIN      net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<11>
+    SLICE_X4Y10.COUT     Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<13>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<12>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<13>
+    SLICE_X6Y25.F4       net (fanout=95)       2.288   Mcompar_salida_color_cmp_lt0000_cy<13>
+    SLICE_X6Y25.X        Tilo                  0.601   conteo_caracteres_and0000
+                                                       conteo_caracteres_and0000136
+    SLICE_X0Y20.SR       net (fanout=16)       1.638   conteo_caracteres_and0000
+    SLICE_X0Y20.CLK      Tsrck                 0.433   conteo_caracteres<8>
+                                                       conteo_caracteres_8
     -------------------------------------------------  ---------------------------
-    Total                                     10.046ns (4.634ns logic, 5.412ns route)
-                                                       (46.1% logic, 53.9% route)
+    Total                                      8.988ns (3.624ns logic, 5.364ns route)
+                                                       (40.3% logic, 59.7% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     73.285ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               conteo_caracteres_28 (FF)
-  Destination:          caracter2<1>_0 (FF)
+Slack (setup path):     74.557ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Conteo_7 (FF)
+  Destination:          conteo_caracteres_8 (FF)
   Requirement:          83.333ns
-  Data Path Delay:      9.926ns (Levels of Logic = 6)
-  Clock Path Skew:      -0.122ns (0.263 - 0.385)
+  Data Path Delay:      8.691ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.085ns (0.271 - 0.356)
   Source Clock:         Clk_BUFGP rising at 0.000ns
   Destination Clock:    Clk_BUFGP rising at 83.333ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: conteo_caracteres_28 to caracter2<1>_0
+  Maximum Data Path: Conteo_7 to conteo_caracteres_8
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X2Y30.XQ       Tcko                  0.521   conteo_caracteres<28>
-                                                       conteo_caracteres_28
-    SLICE_X3Y24.G3       net (fanout=3)        1.605   conteo_caracteres<28>
-    SLICE_X3Y24.COUT     Topcyg                1.009   conteo_caracteres_cmp_eq00001_wg_cy<5>
-                                                       conteo_caracteres_cmp_eq00001_wg_lut<5>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<5>
-    SLICE_X3Y25.CIN      net (fanout=1)        0.000   conteo_caracteres_cmp_eq00001_wg_cy<5>
-    SLICE_X3Y25.XB       Tcinxb                0.216   conteo_caracteres_cmp_eq00001_wg_cy<6>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<6>
-    SLICE_X0Y21.G1       net (fanout=40)       0.791   conteo_caracteres_cmp_eq00001_wg_cy<6>
-    SLICE_X0Y21.Y        Tilo                  0.616   mux0001_cmp_eq0015
-                                                       mux0001_cmp_eq000311
-    SLICE_X8Y18.G1       net (fanout=12)       1.057   N105
-    SLICE_X8Y18.Y        Tilo                  0.616   N236
-                                                       mux0001_cmp_eq00032
-    SLICE_X0Y26.G3       net (fanout=14)       1.365   mux0001_cmp_eq0003
-    SLICE_X0Y26.COUT     Topcyg                1.127   _mux0012_wg_cy<5>
-                                                       _mux0012_wg_lut<5>
-                                                       _mux0012_wg_cy<5>
-    SLICE_X0Y27.CIN      net (fanout=1)        0.000   _mux0012_wg_cy<5>
-    SLICE_X0Y27.XB       Tcinxb                0.313   caracter2<1><0>
-                                                       _mux0012_wg_cy<6>
-    SLICE_X0Y27.BY       net (fanout=1)        0.410   _mux0012
-    SLICE_X0Y27.CLK      Tdick                 0.280   caracter2<1><0>
-                                                       caracter2<1>_0
+    SLICE_X6Y3.YQ        Tcko                  0.596   Conteo<6>
+                                                       Conteo_7
+    SLICE_X4Y4.G4        net (fanout=8)        1.072   Conteo<7>
+    SLICE_X4Y4.COUT      Topcyg                1.127   Mcompar_salida_color_cmp_lt0000_cy<1>
+                                                       Mcompar_salida_color_cmp_lt0000_lut<1>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<1>
+    SLICE_X4Y5.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<1>
+    SLICE_X4Y5.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<3>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<2>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<3>
+    SLICE_X4Y6.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<3>
+    SLICE_X4Y6.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<5>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<4>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<5>
+    SLICE_X4Y7.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<5>
+    SLICE_X4Y7.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<7>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<6>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<7>
+    SLICE_X4Y8.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<7>
+    SLICE_X4Y8.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<9>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<8>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<9>
+    SLICE_X4Y9.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<9>
+    SLICE_X4Y9.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<11>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<10>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<11>
+    SLICE_X4Y10.CIN      net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<11>
+    SLICE_X4Y10.COUT     Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<13>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<12>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<13>
+    SLICE_X6Y25.F4       net (fanout=95)       2.288   Mcompar_salida_color_cmp_lt0000_cy<13>
+    SLICE_X6Y25.X        Tilo                  0.601   conteo_caracteres_and0000
+                                                       conteo_caracteres_and0000136
+    SLICE_X0Y20.SR       net (fanout=16)       1.638   conteo_caracteres_and0000
+    SLICE_X0Y20.CLK      Tsrck                 0.433   conteo_caracteres<8>
+                                                       conteo_caracteres_8
     -------------------------------------------------  ---------------------------
-    Total                                      9.926ns (4.698ns logic, 5.228ns route)
-                                                       (47.3% logic, 52.7% route)
+    Total                                      8.691ns (3.693ns logic, 4.998ns route)
+                                                       (42.5% logic, 57.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     73.607ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               conteo_caracteres_21 (FF)
-  Destination:          caracter2<1>_0 (FF)
+Slack (setup path):     74.851ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Conteo_5 (FF)
+  Destination:          conteo_caracteres_8 (FF)
   Requirement:          83.333ns
-  Data Path Delay:      9.617ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.109ns (0.263 - 0.372)
+  Data Path Delay:      8.397ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.085ns (0.271 - 0.356)
   Source Clock:         Clk_BUFGP rising at 0.000ns
   Destination Clock:    Clk_BUFGP rising at 83.333ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: conteo_caracteres_21 to caracter2<1>_0
+  Maximum Data Path: Conteo_5 to conteo_caracteres_8
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X2Y26.YQ       Tcko                  0.596   conteo_caracteres<20>
-                                                       conteo_caracteres_21
-    SLICE_X3Y22.F3       net (fanout=3)        0.824   conteo_caracteres<21>
-    SLICE_X3Y22.COUT     Topcyf                1.026   conteo_caracteres_cmp_eq00001_wg_cy<1>
-                                                       conteo_caracteres_cmp_eq00001_wg_lut<0>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<0>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<1>
-    SLICE_X3Y23.CIN      net (fanout=1)        0.000   conteo_caracteres_cmp_eq00001_wg_cy<1>
-    SLICE_X3Y23.COUT     Tbyp                  0.130   conteo_caracteres_cmp_eq00001_wg_cy<3>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<2>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<3>
-    SLICE_X3Y24.CIN      net (fanout=1)        0.000   conteo_caracteres_cmp_eq00001_wg_cy<3>
-    SLICE_X3Y24.COUT     Tbyp                  0.130   conteo_caracteres_cmp_eq00001_wg_cy<5>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<4>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<5>
-    SLICE_X3Y25.CIN      net (fanout=1)        0.000   conteo_caracteres_cmp_eq00001_wg_cy<5>
-    SLICE_X3Y25.XB       Tcinxb                0.216   conteo_caracteres_cmp_eq00001_wg_cy<6>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<6>
-    SLICE_X3Y30.G1       net (fanout=40)       0.768   conteo_caracteres_cmp_eq00001_wg_cy<6>
-    SLICE_X3Y30.Y        Tilo                  0.561   mux0001_cmp_eq0018
-                                                       mux0001_cmp_eq000211
-    SLICE_X6Y21.F3       net (fanout=9)        1.779   N107
-    SLICE_X6Y21.X        Tilo                  0.601   mux0001_cmp_eq0030
-                                                       mux0001_cmp_eq00301
-    SLICE_X0Y26.F4       net (fanout=10)       0.850   mux0001_cmp_eq0030
-    SLICE_X0Y26.COUT     Topcyf                1.133   _mux0012_wg_cy<5>
-                                                       _mux0012_wg_lut<4>
-                                                       _mux0012_wg_cy<4>
-                                                       _mux0012_wg_cy<5>
-    SLICE_X0Y27.CIN      net (fanout=1)        0.000   _mux0012_wg_cy<5>
-    SLICE_X0Y27.XB       Tcinxb                0.313   caracter2<1><0>
-                                                       _mux0012_wg_cy<6>
-    SLICE_X0Y27.BY       net (fanout=1)        0.410   _mux0012
-    SLICE_X0Y27.CLK      Tdick                 0.280   caracter2<1><0>
-                                                       caracter2<1>_0
+    SLICE_X6Y2.YQ        Tcko                  0.596   Conteo<4>
+                                                       Conteo_5
+    SLICE_X4Y4.F1        net (fanout=8)        0.772   Conteo<5>
+    SLICE_X4Y4.COUT      Topcyf                1.133   Mcompar_salida_color_cmp_lt0000_cy<1>
+                                                       Mcompar_salida_color_cmp_lt0000_lut<0>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<0>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<1>
+    SLICE_X4Y5.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<1>
+    SLICE_X4Y5.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<3>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<2>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<3>
+    SLICE_X4Y6.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<3>
+    SLICE_X4Y6.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<5>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<4>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<5>
+    SLICE_X4Y7.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<5>
+    SLICE_X4Y7.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<7>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<6>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<7>
+    SLICE_X4Y8.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<7>
+    SLICE_X4Y8.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<9>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<8>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<9>
+    SLICE_X4Y9.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<9>
+    SLICE_X4Y9.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<11>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<10>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<11>
+    SLICE_X4Y10.CIN      net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<11>
+    SLICE_X4Y10.COUT     Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<13>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<12>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<13>
+    SLICE_X6Y25.F4       net (fanout=95)       2.288   Mcompar_salida_color_cmp_lt0000_cy<13>
+    SLICE_X6Y25.X        Tilo                  0.601   conteo_caracteres_and0000
+                                                       conteo_caracteres_and0000136
+    SLICE_X0Y20.SR       net (fanout=16)       1.638   conteo_caracteres_and0000
+    SLICE_X0Y20.CLK      Tsrck                 0.433   conteo_caracteres<8>
+                                                       conteo_caracteres_8
     -------------------------------------------------  ---------------------------
-    Total                                      9.617ns (4.986ns logic, 4.631ns route)
-                                                       (51.8% logic, 48.2% route)
+    Total                                      8.397ns (3.699ns logic, 4.698ns route)
+                                                       (44.1% logic, 55.9% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point caracter2<0>_3 (SLICE_X0Y31.CIN), 703 paths
+Paths for end point conteo_caracteres_9 (SLICE_X0Y20.SR), 61 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     73.249ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               conteo_caracteres_28 (FF)
-  Destination:          caracter2<0>_3 (FF)
+Slack (setup path):     74.260ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Conteo_6 (FF)
+  Destination:          conteo_caracteres_9 (FF)
   Requirement:          83.333ns
-  Data Path Delay:      9.967ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.117ns (0.268 - 0.385)
+  Data Path Delay:      8.988ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.085ns (0.271 - 0.356)
   Source Clock:         Clk_BUFGP rising at 0.000ns
   Destination Clock:    Clk_BUFGP rising at 83.333ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: conteo_caracteres_28 to caracter2<0>_3
+  Maximum Data Path: Conteo_6 to conteo_caracteres_9
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X2Y30.XQ       Tcko                  0.521   conteo_caracteres<28>
-                                                       conteo_caracteres_28
-    SLICE_X3Y24.G3       net (fanout=3)        1.605   conteo_caracteres<28>
-    SLICE_X3Y24.COUT     Topcyg                1.009   conteo_caracteres_cmp_eq00001_wg_cy<5>
-                                                       conteo_caracteres_cmp_eq00001_wg_lut<5>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<5>
-    SLICE_X3Y25.CIN      net (fanout=1)        0.000   conteo_caracteres_cmp_eq00001_wg_cy<5>
-    SLICE_X3Y25.XB       Tcinxb                0.216   conteo_caracteres_cmp_eq00001_wg_cy<6>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<6>
-    SLICE_X3Y30.G1       net (fanout=40)       0.768   conteo_caracteres_cmp_eq00001_wg_cy<6>
-    SLICE_X3Y30.Y        Tilo                  0.561   mux0001_cmp_eq0018
-                                                       mux0001_cmp_eq000211
-    SLICE_X6Y21.F3       net (fanout=9)        1.779   N107
-    SLICE_X6Y21.X        Tilo                  0.601   mux0001_cmp_eq0030
-                                                       mux0001_cmp_eq00301
-    SLICE_X0Y29.G4       net (fanout=10)       1.115   mux0001_cmp_eq0030
-    SLICE_X0Y29.COUT     Topcyg                1.127   _mux0003_wg_cy<3>
-                                                       _mux0003_wg_lut<3>
-                                                       _mux0003_wg_cy<3>
-    SLICE_X0Y30.CIN      net (fanout=1)        0.000   _mux0003_wg_cy<3>
-    SLICE_X0Y30.COUT     Tbyp                  0.156   _mux0003
-                                                       _mux0003_wg_cy<4>
-                                                       _mux0003_wg_cy<5>
-    SLICE_X0Y31.CIN      net (fanout=1)        0.000   _mux0003
-    SLICE_X0Y31.CLK      Tcinck                0.509   caracter2<0><3>
-                                                       _mux0003_rt
-                                                       caracter2<0>_3
+    SLICE_X6Y3.XQ        Tcko                  0.521   Conteo<6>
+                                                       Conteo_6
+    SLICE_X4Y4.F2        net (fanout=8)        1.438   Conteo<6>
+    SLICE_X4Y4.COUT      Topcyf                1.133   Mcompar_salida_color_cmp_lt0000_cy<1>
+                                                       Mcompar_salida_color_cmp_lt0000_lut<0>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<0>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<1>
+    SLICE_X4Y5.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<1>
+    SLICE_X4Y5.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<3>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<2>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<3>
+    SLICE_X4Y6.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<3>
+    SLICE_X4Y6.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<5>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<4>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<5>
+    SLICE_X4Y7.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<5>
+    SLICE_X4Y7.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<7>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<6>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<7>
+    SLICE_X4Y8.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<7>
+    SLICE_X4Y8.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<9>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<8>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<9>
+    SLICE_X4Y9.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<9>
+    SLICE_X4Y9.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<11>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<10>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<11>
+    SLICE_X4Y10.CIN      net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<11>
+    SLICE_X4Y10.COUT     Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<13>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<12>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<13>
+    SLICE_X6Y25.F4       net (fanout=95)       2.288   Mcompar_salida_color_cmp_lt0000_cy<13>
+    SLICE_X6Y25.X        Tilo                  0.601   conteo_caracteres_and0000
+                                                       conteo_caracteres_and0000136
+    SLICE_X0Y20.SR       net (fanout=16)       1.638   conteo_caracteres_and0000
+    SLICE_X0Y20.CLK      Tsrck                 0.433   conteo_caracteres<8>
+                                                       conteo_caracteres_9
     -------------------------------------------------  ---------------------------
-    Total                                      9.967ns (4.700ns logic, 5.267ns route)
-                                                       (47.2% logic, 52.8% route)
+    Total                                      8.988ns (3.624ns logic, 5.364ns route)
+                                                       (40.3% logic, 59.7% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     73.535ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               conteo_caracteres_28 (FF)
-  Destination:          caracter2<0>_3 (FF)
+Slack (setup path):     74.557ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Conteo_7 (FF)
+  Destination:          conteo_caracteres_9 (FF)
   Requirement:          83.333ns
-  Data Path Delay:      9.681ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.117ns (0.268 - 0.385)
+  Data Path Delay:      8.691ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.085ns (0.271 - 0.356)
   Source Clock:         Clk_BUFGP rising at 0.000ns
   Destination Clock:    Clk_BUFGP rising at 83.333ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: conteo_caracteres_28 to caracter2<0>_3
+  Maximum Data Path: Conteo_7 to conteo_caracteres_9
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X2Y30.XQ       Tcko                  0.521   conteo_caracteres<28>
-                                                       conteo_caracteres_28
-    SLICE_X3Y24.G3       net (fanout=3)        1.605   conteo_caracteres<28>
-    SLICE_X3Y24.COUT     Topcyg                1.009   conteo_caracteres_cmp_eq00001_wg_cy<5>
-                                                       conteo_caracteres_cmp_eq00001_wg_lut<5>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<5>
-    SLICE_X3Y25.CIN      net (fanout=1)        0.000   conteo_caracteres_cmp_eq00001_wg_cy<5>
-    SLICE_X3Y25.XB       Tcinxb                0.216   conteo_caracteres_cmp_eq00001_wg_cy<6>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<6>
-    SLICE_X0Y21.G1       net (fanout=40)       0.791   conteo_caracteres_cmp_eq00001_wg_cy<6>
-    SLICE_X0Y21.Y        Tilo                  0.616   mux0001_cmp_eq0015
-                                                       mux0001_cmp_eq000311
-    SLICE_X8Y18.G1       net (fanout=12)       1.057   N105
-    SLICE_X8Y18.Y        Tilo                  0.616   N236
-                                                       mux0001_cmp_eq00032
-    SLICE_X0Y29.G1       net (fanout=14)       1.458   mux0001_cmp_eq0003
-    SLICE_X0Y29.COUT     Topcyg                1.127   _mux0003_wg_cy<3>
-                                                       _mux0003_wg_lut<3>
-                                                       _mux0003_wg_cy<3>
-    SLICE_X0Y30.CIN      net (fanout=1)        0.000   _mux0003_wg_cy<3>
-    SLICE_X0Y30.COUT     Tbyp                  0.156   _mux0003
-                                                       _mux0003_wg_cy<4>
-                                                       _mux0003_wg_cy<5>
-    SLICE_X0Y31.CIN      net (fanout=1)        0.000   _mux0003
-    SLICE_X0Y31.CLK      Tcinck                0.509   caracter2<0><3>
-                                                       _mux0003_rt
-                                                       caracter2<0>_3
+    SLICE_X6Y3.YQ        Tcko                  0.596   Conteo<6>
+                                                       Conteo_7
+    SLICE_X4Y4.G4        net (fanout=8)        1.072   Conteo<7>
+    SLICE_X4Y4.COUT      Topcyg                1.127   Mcompar_salida_color_cmp_lt0000_cy<1>
+                                                       Mcompar_salida_color_cmp_lt0000_lut<1>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<1>
+    SLICE_X4Y5.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<1>
+    SLICE_X4Y5.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<3>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<2>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<3>
+    SLICE_X4Y6.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<3>
+    SLICE_X4Y6.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<5>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<4>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<5>
+    SLICE_X4Y7.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<5>
+    SLICE_X4Y7.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<7>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<6>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<7>
+    SLICE_X4Y8.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<7>
+    SLICE_X4Y8.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<9>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<8>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<9>
+    SLICE_X4Y9.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<9>
+    SLICE_X4Y9.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<11>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<10>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<11>
+    SLICE_X4Y10.CIN      net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<11>
+    SLICE_X4Y10.COUT     Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<13>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<12>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<13>
+    SLICE_X6Y25.F4       net (fanout=95)       2.288   Mcompar_salida_color_cmp_lt0000_cy<13>
+    SLICE_X6Y25.X        Tilo                  0.601   conteo_caracteres_and0000
+                                                       conteo_caracteres_and0000136
+    SLICE_X0Y20.SR       net (fanout=16)       1.638   conteo_caracteres_and0000
+    SLICE_X0Y20.CLK      Tsrck                 0.433   conteo_caracteres<8>
+                                                       conteo_caracteres_9
     -------------------------------------------------  ---------------------------
-    Total                                      9.681ns (4.770ns logic, 4.911ns route)
-                                                       (49.3% logic, 50.7% route)
+    Total                                      8.691ns (3.693ns logic, 4.998ns route)
+                                                       (42.5% logic, 57.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     73.691ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               conteo_caracteres_21 (FF)
-  Destination:          caracter2<0>_3 (FF)
+Slack (setup path):     74.851ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Conteo_5 (FF)
+  Destination:          conteo_caracteres_9 (FF)
   Requirement:          83.333ns
-  Data Path Delay:      9.538ns (Levels of Logic = 9)
-  Clock Path Skew:      -0.104ns (0.268 - 0.372)
+  Data Path Delay:      8.397ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.085ns (0.271 - 0.356)
   Source Clock:         Clk_BUFGP rising at 0.000ns
   Destination Clock:    Clk_BUFGP rising at 83.333ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: conteo_caracteres_21 to caracter2<0>_3
+  Maximum Data Path: Conteo_5 to conteo_caracteres_9
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X2Y26.YQ       Tcko                  0.596   conteo_caracteres<20>
-                                                       conteo_caracteres_21
-    SLICE_X3Y22.F3       net (fanout=3)        0.824   conteo_caracteres<21>
-    SLICE_X3Y22.COUT     Topcyf                1.026   conteo_caracteres_cmp_eq00001_wg_cy<1>
-                                                       conteo_caracteres_cmp_eq00001_wg_lut<0>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<0>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<1>
-    SLICE_X3Y23.CIN      net (fanout=1)        0.000   conteo_caracteres_cmp_eq00001_wg_cy<1>
-    SLICE_X3Y23.COUT     Tbyp                  0.130   conteo_caracteres_cmp_eq00001_wg_cy<3>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<2>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<3>
-    SLICE_X3Y24.CIN      net (fanout=1)        0.000   conteo_caracteres_cmp_eq00001_wg_cy<3>
-    SLICE_X3Y24.COUT     Tbyp                  0.130   conteo_caracteres_cmp_eq00001_wg_cy<5>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<4>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<5>
-    SLICE_X3Y25.CIN      net (fanout=1)        0.000   conteo_caracteres_cmp_eq00001_wg_cy<5>
-    SLICE_X3Y25.XB       Tcinxb                0.216   conteo_caracteres_cmp_eq00001_wg_cy<6>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<6>
-    SLICE_X3Y30.G1       net (fanout=40)       0.768   conteo_caracteres_cmp_eq00001_wg_cy<6>
-    SLICE_X3Y30.Y        Tilo                  0.561   mux0001_cmp_eq0018
-                                                       mux0001_cmp_eq000211
-    SLICE_X6Y21.F3       net (fanout=9)        1.779   N107
-    SLICE_X6Y21.X        Tilo                  0.601   mux0001_cmp_eq0030
-                                                       mux0001_cmp_eq00301
-    SLICE_X0Y29.G4       net (fanout=10)       1.115   mux0001_cmp_eq0030
-    SLICE_X0Y29.COUT     Topcyg                1.127   _mux0003_wg_cy<3>
-                                                       _mux0003_wg_lut<3>
-                                                       _mux0003_wg_cy<3>
-    SLICE_X0Y30.CIN      net (fanout=1)        0.000   _mux0003_wg_cy<3>
-    SLICE_X0Y30.COUT     Tbyp                  0.156   _mux0003
-                                                       _mux0003_wg_cy<4>
-                                                       _mux0003_wg_cy<5>
-    SLICE_X0Y31.CIN      net (fanout=1)        0.000   _mux0003
-    SLICE_X0Y31.CLK      Tcinck                0.509   caracter2<0><3>
-                                                       _mux0003_rt
-                                                       caracter2<0>_3
+    SLICE_X6Y2.YQ        Tcko                  0.596   Conteo<4>
+                                                       Conteo_5
+    SLICE_X4Y4.F1        net (fanout=8)        0.772   Conteo<5>
+    SLICE_X4Y4.COUT      Topcyf                1.133   Mcompar_salida_color_cmp_lt0000_cy<1>
+                                                       Mcompar_salida_color_cmp_lt0000_lut<0>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<0>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<1>
+    SLICE_X4Y5.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<1>
+    SLICE_X4Y5.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<3>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<2>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<3>
+    SLICE_X4Y6.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<3>
+    SLICE_X4Y6.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<5>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<4>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<5>
+    SLICE_X4Y7.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<5>
+    SLICE_X4Y7.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<7>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<6>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<7>
+    SLICE_X4Y8.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<7>
+    SLICE_X4Y8.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<9>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<8>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<9>
+    SLICE_X4Y9.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<9>
+    SLICE_X4Y9.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<11>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<10>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<11>
+    SLICE_X4Y10.CIN      net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<11>
+    SLICE_X4Y10.COUT     Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<13>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<12>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<13>
+    SLICE_X6Y25.F4       net (fanout=95)       2.288   Mcompar_salida_color_cmp_lt0000_cy<13>
+    SLICE_X6Y25.X        Tilo                  0.601   conteo_caracteres_and0000
+                                                       conteo_caracteres_and0000136
+    SLICE_X0Y20.SR       net (fanout=16)       1.638   conteo_caracteres_and0000
+    SLICE_X0Y20.CLK      Tsrck                 0.433   conteo_caracteres<8>
+                                                       conteo_caracteres_9
     -------------------------------------------------  ---------------------------
-    Total                                      9.538ns (5.052ns logic, 4.486ns route)
-                                                       (53.0% logic, 47.0% route)
+    Total                                      8.397ns (3.699ns logic, 4.698ns route)
+                                                       (44.1% logic, 55.9% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point caracter2<0>_0 (SLICE_X14Y22.CIN), 768 paths
+Paths for end point conteo_caracteres_10 (SLICE_X0Y21.SR), 61 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     73.387ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               conteo_caracteres_28 (FF)
-  Destination:          caracter2<0>_0 (FF)
+Slack (setup path):     74.260ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Conteo_6 (FF)
+  Destination:          conteo_caracteres_10 (FF)
   Requirement:          83.333ns
-  Data Path Delay:      9.772ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.174ns (0.211 - 0.385)
+  Data Path Delay:      8.988ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.085ns (0.271 - 0.356)
   Source Clock:         Clk_BUFGP rising at 0.000ns
   Destination Clock:    Clk_BUFGP rising at 83.333ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: conteo_caracteres_28 to caracter2<0>_0
+  Maximum Data Path: Conteo_6 to conteo_caracteres_10
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X2Y30.XQ       Tcko                  0.521   conteo_caracteres<28>
-                                                       conteo_caracteres_28
-    SLICE_X3Y24.G3       net (fanout=3)        1.605   conteo_caracteres<28>
-    SLICE_X3Y24.COUT     Topcyg                1.009   conteo_caracteres_cmp_eq00001_wg_cy<5>
-                                                       conteo_caracteres_cmp_eq00001_wg_lut<5>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<5>
-    SLICE_X3Y25.CIN      net (fanout=1)        0.000   conteo_caracteres_cmp_eq00001_wg_cy<5>
-    SLICE_X3Y25.XB       Tcinxb                0.216   conteo_caracteres_cmp_eq00001_wg_cy<6>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<6>
-    SLICE_X3Y30.G1       net (fanout=40)       0.768   conteo_caracteres_cmp_eq00001_wg_cy<6>
-    SLICE_X3Y30.Y        Tilo                  0.561   mux0001_cmp_eq0018
-                                                       mux0001_cmp_eq000211
-    SLICE_X6Y21.F3       net (fanout=9)        1.779   N107
-    SLICE_X6Y21.X        Tilo                  0.601   mux0001_cmp_eq0030
-                                                       mux0001_cmp_eq00301
-    SLICE_X14Y20.G1      net (fanout=10)       0.920   mux0001_cmp_eq0030
-    SLICE_X14Y20.COUT    Topcyg                1.127   _mux0006_wg_cy<3>
-                                                       _mux0006_wg_lut<3>
-                                                       _mux0006_wg_cy<3>
-    SLICE_X14Y21.CIN     net (fanout=1)        0.000   _mux0006_wg_cy<3>
-    SLICE_X14Y21.COUT    Tbyp                  0.156   _mux0006
-                                                       _mux0006_wg_cy<4>
-                                                       _mux0006_wg_cy<5>
-    SLICE_X14Y22.CIN     net (fanout=1)        0.000   _mux0006
-    SLICE_X14Y22.CLK     Tcinck                0.509   caracter2<0><0>
-                                                       _mux0006_rt
-                                                       caracter2<0>_0
+    SLICE_X6Y3.XQ        Tcko                  0.521   Conteo<6>
+                                                       Conteo_6
+    SLICE_X4Y4.F2        net (fanout=8)        1.438   Conteo<6>
+    SLICE_X4Y4.COUT      Topcyf                1.133   Mcompar_salida_color_cmp_lt0000_cy<1>
+                                                       Mcompar_salida_color_cmp_lt0000_lut<0>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<0>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<1>
+    SLICE_X4Y5.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<1>
+    SLICE_X4Y5.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<3>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<2>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<3>
+    SLICE_X4Y6.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<3>
+    SLICE_X4Y6.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<5>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<4>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<5>
+    SLICE_X4Y7.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<5>
+    SLICE_X4Y7.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<7>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<6>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<7>
+    SLICE_X4Y8.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<7>
+    SLICE_X4Y8.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<9>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<8>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<9>
+    SLICE_X4Y9.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<9>
+    SLICE_X4Y9.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<11>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<10>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<11>
+    SLICE_X4Y10.CIN      net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<11>
+    SLICE_X4Y10.COUT     Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<13>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<12>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<13>
+    SLICE_X6Y25.F4       net (fanout=95)       2.288   Mcompar_salida_color_cmp_lt0000_cy<13>
+    SLICE_X6Y25.X        Tilo                  0.601   conteo_caracteres_and0000
+                                                       conteo_caracteres_and0000136
+    SLICE_X0Y21.SR       net (fanout=16)       1.638   conteo_caracteres_and0000
+    SLICE_X0Y21.CLK      Tsrck                 0.433   conteo_caracteres<10>
+                                                       conteo_caracteres_10
     -------------------------------------------------  ---------------------------
-    Total                                      9.772ns (4.700ns logic, 5.072ns route)
-                                                       (48.1% logic, 51.9% route)
+    Total                                      8.988ns (3.624ns logic, 5.364ns route)
+                                                       (40.3% logic, 59.7% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     73.584ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               conteo_caracteres_28 (FF)
-  Destination:          caracter2<0>_0 (FF)
+Slack (setup path):     74.557ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Conteo_7 (FF)
+  Destination:          conteo_caracteres_10 (FF)
   Requirement:          83.333ns
-  Data Path Delay:      9.575ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.174ns (0.211 - 0.385)
+  Data Path Delay:      8.691ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.085ns (0.271 - 0.356)
   Source Clock:         Clk_BUFGP rising at 0.000ns
   Destination Clock:    Clk_BUFGP rising at 83.333ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: conteo_caracteres_28 to caracter2<0>_0
+  Maximum Data Path: Conteo_7 to conteo_caracteres_10
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X2Y30.XQ       Tcko                  0.521   conteo_caracteres<28>
-                                                       conteo_caracteres_28
-    SLICE_X3Y24.G3       net (fanout=3)        1.605   conteo_caracteres<28>
-    SLICE_X3Y24.COUT     Topcyg                1.009   conteo_caracteres_cmp_eq00001_wg_cy<5>
-                                                       conteo_caracteres_cmp_eq00001_wg_lut<5>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<5>
-    SLICE_X3Y25.CIN      net (fanout=1)        0.000   conteo_caracteres_cmp_eq00001_wg_cy<5>
-    SLICE_X3Y25.XB       Tcinxb                0.216   conteo_caracteres_cmp_eq00001_wg_cy<6>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<6>
-    SLICE_X0Y21.G1       net (fanout=40)       0.791   conteo_caracteres_cmp_eq00001_wg_cy<6>
-    SLICE_X0Y21.Y        Tilo                  0.616   mux0001_cmp_eq0015
-                                                       mux0001_cmp_eq000311
-    SLICE_X0Y23.G3       net (fanout=12)       0.827   N105
-    SLICE_X0Y23.Y        Tilo                  0.616   mux0001_cmp_eq0027
-                                                       mux0001_cmp_eq00231
-    SLICE_X14Y20.F4      net (fanout=14)       1.576   mux0001_cmp_eq0023
-    SLICE_X14Y20.COUT    Topcyf                1.133   _mux0006_wg_cy<3>
-                                                       _mux0006_wg_lut<2>
-                                                       _mux0006_wg_cy<2>
-                                                       _mux0006_wg_cy<3>
-    SLICE_X14Y21.CIN     net (fanout=1)        0.000   _mux0006_wg_cy<3>
-    SLICE_X14Y21.COUT    Tbyp                  0.156   _mux0006
-                                                       _mux0006_wg_cy<4>
-                                                       _mux0006_wg_cy<5>
-    SLICE_X14Y22.CIN     net (fanout=1)        0.000   _mux0006
-    SLICE_X14Y22.CLK     Tcinck                0.509   caracter2<0><0>
-                                                       _mux0006_rt
-                                                       caracter2<0>_0
+    SLICE_X6Y3.YQ        Tcko                  0.596   Conteo<6>
+                                                       Conteo_7
+    SLICE_X4Y4.G4        net (fanout=8)        1.072   Conteo<7>
+    SLICE_X4Y4.COUT      Topcyg                1.127   Mcompar_salida_color_cmp_lt0000_cy<1>
+                                                       Mcompar_salida_color_cmp_lt0000_lut<1>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<1>
+    SLICE_X4Y5.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<1>
+    SLICE_X4Y5.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<3>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<2>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<3>
+    SLICE_X4Y6.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<3>
+    SLICE_X4Y6.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<5>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<4>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<5>
+    SLICE_X4Y7.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<5>
+    SLICE_X4Y7.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<7>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<6>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<7>
+    SLICE_X4Y8.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<7>
+    SLICE_X4Y8.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<9>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<8>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<9>
+    SLICE_X4Y9.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<9>
+    SLICE_X4Y9.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<11>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<10>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<11>
+    SLICE_X4Y10.CIN      net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<11>
+    SLICE_X4Y10.COUT     Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<13>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<12>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<13>
+    SLICE_X6Y25.F4       net (fanout=95)       2.288   Mcompar_salida_color_cmp_lt0000_cy<13>
+    SLICE_X6Y25.X        Tilo                  0.601   conteo_caracteres_and0000
+                                                       conteo_caracteres_and0000136
+    SLICE_X0Y21.SR       net (fanout=16)       1.638   conteo_caracteres_and0000
+    SLICE_X0Y21.CLK      Tsrck                 0.433   conteo_caracteres<10>
+                                                       conteo_caracteres_10
     -------------------------------------------------  ---------------------------
-    Total                                      9.575ns (4.776ns logic, 4.799ns route)
-                                                       (49.9% logic, 50.1% route)
+    Total                                      8.691ns (3.693ns logic, 4.998ns route)
+                                                       (42.5% logic, 57.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     73.829ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               conteo_caracteres_21 (FF)
-  Destination:          caracter2<0>_0 (FF)
+Slack (setup path):     74.851ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Conteo_5 (FF)
+  Destination:          conteo_caracteres_10 (FF)
   Requirement:          83.333ns
-  Data Path Delay:      9.343ns (Levels of Logic = 9)
-  Clock Path Skew:      -0.161ns (0.211 - 0.372)
+  Data Path Delay:      8.397ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.085ns (0.271 - 0.356)
   Source Clock:         Clk_BUFGP rising at 0.000ns
   Destination Clock:    Clk_BUFGP rising at 83.333ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: conteo_caracteres_21 to caracter2<0>_0
+  Maximum Data Path: Conteo_5 to conteo_caracteres_10
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X2Y26.YQ       Tcko                  0.596   conteo_caracteres<20>
-                                                       conteo_caracteres_21
-    SLICE_X3Y22.F3       net (fanout=3)        0.824   conteo_caracteres<21>
-    SLICE_X3Y22.COUT     Topcyf                1.026   conteo_caracteres_cmp_eq00001_wg_cy<1>
-                                                       conteo_caracteres_cmp_eq00001_wg_lut<0>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<0>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<1>
-    SLICE_X3Y23.CIN      net (fanout=1)        0.000   conteo_caracteres_cmp_eq00001_wg_cy<1>
-    SLICE_X3Y23.COUT     Tbyp                  0.130   conteo_caracteres_cmp_eq00001_wg_cy<3>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<2>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<3>
-    SLICE_X3Y24.CIN      net (fanout=1)        0.000   conteo_caracteres_cmp_eq00001_wg_cy<3>
-    SLICE_X3Y24.COUT     Tbyp                  0.130   conteo_caracteres_cmp_eq00001_wg_cy<5>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<4>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<5>
-    SLICE_X3Y25.CIN      net (fanout=1)        0.000   conteo_caracteres_cmp_eq00001_wg_cy<5>
-    SLICE_X3Y25.XB       Tcinxb                0.216   conteo_caracteres_cmp_eq00001_wg_cy<6>
-                                                       conteo_caracteres_cmp_eq00001_wg_cy<6>
-    SLICE_X3Y30.G1       net (fanout=40)       0.768   conteo_caracteres_cmp_eq00001_wg_cy<6>
-    SLICE_X3Y30.Y        Tilo                  0.561   mux0001_cmp_eq0018
-                                                       mux0001_cmp_eq000211
-    SLICE_X6Y21.F3       net (fanout=9)        1.779   N107
-    SLICE_X6Y21.X        Tilo                  0.601   mux0001_cmp_eq0030
-                                                       mux0001_cmp_eq00301
-    SLICE_X14Y20.G1      net (fanout=10)       0.920   mux0001_cmp_eq0030
-    SLICE_X14Y20.COUT    Topcyg                1.127   _mux0006_wg_cy<3>
-                                                       _mux0006_wg_lut<3>
-                                                       _mux0006_wg_cy<3>
-    SLICE_X14Y21.CIN     net (fanout=1)        0.000   _mux0006_wg_cy<3>
-    SLICE_X14Y21.COUT    Tbyp                  0.156   _mux0006
-                                                       _mux0006_wg_cy<4>
-                                                       _mux0006_wg_cy<5>
-    SLICE_X14Y22.CIN     net (fanout=1)        0.000   _mux0006
-    SLICE_X14Y22.CLK     Tcinck                0.509   caracter2<0><0>
-                                                       _mux0006_rt
-                                                       caracter2<0>_0
+    SLICE_X6Y2.YQ        Tcko                  0.596   Conteo<4>
+                                                       Conteo_5
+    SLICE_X4Y4.F1        net (fanout=8)        0.772   Conteo<5>
+    SLICE_X4Y4.COUT      Topcyf                1.133   Mcompar_salida_color_cmp_lt0000_cy<1>
+                                                       Mcompar_salida_color_cmp_lt0000_lut<0>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<0>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<1>
+    SLICE_X4Y5.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<1>
+    SLICE_X4Y5.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<3>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<2>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<3>
+    SLICE_X4Y6.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<3>
+    SLICE_X4Y6.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<5>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<4>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<5>
+    SLICE_X4Y7.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<5>
+    SLICE_X4Y7.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<7>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<6>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<7>
+    SLICE_X4Y8.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<7>
+    SLICE_X4Y8.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<9>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<8>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<9>
+    SLICE_X4Y9.CIN       net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<9>
+    SLICE_X4Y9.COUT      Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<11>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<10>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<11>
+    SLICE_X4Y10.CIN      net (fanout=1)        0.000   Mcompar_salida_color_cmp_lt0000_cy<11>
+    SLICE_X4Y10.COUT     Tbyp                  0.156   Mcompar_salida_color_cmp_lt0000_cy<13>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<12>
+                                                       Mcompar_salida_color_cmp_lt0000_cy<13>
+    SLICE_X6Y25.F4       net (fanout=95)       2.288   Mcompar_salida_color_cmp_lt0000_cy<13>
+    SLICE_X6Y25.X        Tilo                  0.601   conteo_caracteres_and0000
+                                                       conteo_caracteres_and0000136
+    SLICE_X0Y21.SR       net (fanout=16)       1.638   conteo_caracteres_and0000
+    SLICE_X0Y21.CLK      Tsrck                 0.433   conteo_caracteres<10>
+                                                       conteo_caracteres_10
     -------------------------------------------------  ---------------------------
-    Total                                      9.343ns (5.052ns logic, 4.291ns route)
-                                                       (54.1% logic, 45.9% route)
+    Total                                      8.397ns (3.699ns logic, 4.698ns route)
+                                                       (44.1% logic, 55.9% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: NET "Clk_BUFGP/IBUFG" PERIOD = 83.3333333 ns HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point salida_color_1 (SLICE_X1Y2.F3), 1 path
+Paths for end point unidades_3 (SLICE_X15Y10.F4), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      1.073ns (requirement - (clock path skew + uncertainty - data path))
+Slack (hold path):      1.143ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               unidades_3 (FF)
+  Destination:          unidades_3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.143ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         Clk_BUFGP rising at 83.333ns
+  Destination Clock:    Clk_BUFGP rising at 83.333ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: unidades_3 to unidades_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X15Y10.XQ      Tcko                  0.396   unidades<3>
+                                                       unidades_3
+    SLICE_X15Y10.F4      net (fanout=19)       0.341   unidades<3>
+    SLICE_X15Y10.CLK     Tckf        (-Th)    -0.406   unidades<3>
+                                                       Mcount_unidades_xor<3>11
+                                                       unidades_3
+    -------------------------------------------------  ---------------------------
+    Total                                      1.143ns (0.802ns logic, 0.341ns route)
+                                                       (70.2% logic, 29.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point salida_color_1 (SLICE_X2Y3.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.167ns (requirement - (clock path skew + uncertainty - data path))
   Source:               conteo_color_2 (FF)
   Destination:          salida_color_1 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      1.092ns (Levels of Logic = 1)
-  Clock Path Skew:      0.019ns (0.097 - 0.078)
+  Data Path Delay:      1.180ns (Levels of Logic = 1)
+  Clock Path Skew:      0.013ns (0.116 - 0.103)
   Source Clock:         Clk_BUFGP rising at 83.333ns
   Destination Clock:    Clk_BUFGP rising at 83.333ns
   Clock Uncertainty:    0.000ns
@@ -507,71 +598,43 @@ Slack (hold path):      1.073ns (requirement - (clock path skew + uncertainty - 
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X0Y4.XQ        Tcko                  0.417   conteo_color<2>
+    SLICE_X3Y1.XQ        Tcko                  0.396   conteo_color<2>
                                                        conteo_color_2
-    SLICE_X1Y2.F3        net (fanout=4)        0.269   conteo_color<2>
-    SLICE_X1Y2.CLK       Tckf        (-Th)    -0.406   salida_color_1
+    SLICE_X2Y3.F4        net (fanout=5)        0.346   conteo_color<2>
+    SLICE_X2Y3.CLK       Tckf        (-Th)    -0.438   salida_color_1
                                                        Mrom_salida_color_mux0000111
                                                        salida_color_1
     -------------------------------------------------  ---------------------------
-    Total                                      1.092ns (0.823ns logic, 0.269ns route)
-                                                       (75.4% logic, 24.6% route)
+    Total                                      1.180ns (0.834ns logic, 0.346ns route)
+                                                       (70.7% logic, 29.3% route)
 
 --------------------------------------------------------------------------------
 
-Paths for end point salida_color_1 (SLICE_X1Y2.F4), 1 path
+Paths for end point salida_color_0 (SLICE_X2Y3.G4), 1 path
 --------------------------------------------------------------------------------
-Slack (hold path):      1.101ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               conteo_color_0 (FF)
-  Destination:          salida_color_1 (FF)
-  Requirement:          0.000ns
-  Data Path Delay:      1.116ns (Levels of Logic = 1)
-  Clock Path Skew:      0.015ns (0.097 - 0.082)
-  Source Clock:         Clk_BUFGP rising at 83.333ns
-  Destination Clock:    Clk_BUFGP rising at 83.333ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path: conteo_color_0 to salida_color_1
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X0Y3.XQ        Tcko                  0.417   conteo_color<0>
-                                                       conteo_color_0
-    SLICE_X1Y2.F4        net (fanout=3)        0.293   conteo_color<0>
-    SLICE_X1Y2.CLK       Tckf        (-Th)    -0.406   salida_color_1
-                                                       Mrom_salida_color_mux0000111
-                                                       salida_color_1
-    -------------------------------------------------  ---------------------------
-    Total                                      1.116ns (0.823ns logic, 0.293ns route)
-                                                       (73.7% logic, 26.3% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point salida_color_0 (SLICE_X1Y2.G4), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      1.101ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               conteo_color_0 (FF)
+Slack (hold path):      1.211ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               conteo_color_2 (FF)
   Destination:          salida_color_0 (FF)
   Requirement:          0.000ns
-  Data Path Delay:      1.116ns (Levels of Logic = 1)
-  Clock Path Skew:      0.015ns (0.097 - 0.082)
+  Data Path Delay:      1.224ns (Levels of Logic = 1)
+  Clock Path Skew:      0.013ns (0.116 - 0.103)
   Source Clock:         Clk_BUFGP rising at 83.333ns
   Destination Clock:    Clk_BUFGP rising at 83.333ns
   Clock Uncertainty:    0.000ns
 
-  Minimum Data Path: conteo_color_0 to salida_color_0
+  Minimum Data Path: conteo_color_2 to salida_color_0
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X0Y3.XQ        Tcko                  0.417   conteo_color<0>
-                                                       conteo_color_0
-    SLICE_X1Y2.G4        net (fanout=3)        0.293   conteo_color<0>
-    SLICE_X1Y2.CLK       Tckg        (-Th)    -0.406   salida_color_1
+    SLICE_X3Y1.XQ        Tcko                  0.396   conteo_color<2>
+                                                       conteo_color_2
+    SLICE_X2Y3.G4        net (fanout=5)        0.378   conteo_color<2>
+    SLICE_X2Y3.CLK       Tckg        (-Th)    -0.450   salida_color_1
                                                        Mrom_salida_color_mux000012
                                                        salida_color_0
     -------------------------------------------------  ---------------------------
-    Total                                      1.116ns (0.823ns logic, 0.293ns route)
-                                                       (73.7% logic, 26.3% route)
+    Total                                      1.224ns (0.846ns logic, 0.378ns route)
+                                                       (69.1% logic, 30.9% route)
 
 --------------------------------------------------------------------------------
 
@@ -581,27 +644,27 @@ Slack: 82.005ns (period - (min low pulse limit / (low pulse / period)))
   Period: 83.333ns
   Low pulse: 41.666ns
   Low pulse limit: 0.664ns (Tcl)
-  Physical resource: conteo_color<0>/CLK
-  Logical resource: conteo_color_0/CK
-  Location pin: SLICE_X0Y3.CLK
+  Physical resource: Conteo<0>/CLK
+  Logical resource: Conteo_0/CK
+  Location pin: SLICE_X6Y0.CLK
   Clock network: Clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 82.005ns (period - (min high pulse limit / (high pulse / period)))
   Period: 83.333ns
   High pulse: 41.666ns
   High pulse limit: 0.664ns (Tch)
-  Physical resource: conteo_color<0>/CLK
-  Logical resource: conteo_color_0/CK
-  Location pin: SLICE_X0Y3.CLK
+  Physical resource: Conteo<0>/CLK
+  Logical resource: Conteo_0/CK
+  Location pin: SLICE_X6Y0.CLK
   Clock network: Clk_BUFGP
 --------------------------------------------------------------------------------
 Slack: 82.005ns (period - (min low pulse limit / (low pulse / period)))
   Period: 83.333ns
   Low pulse: 41.666ns
   Low pulse limit: 0.664ns (Tcl)
-  Physical resource: conteo_color<0>/CLK
-  Logical resource: conteo_color_1/CK
-  Location pin: SLICE_X0Y3.CLK
+  Physical resource: Conteo<0>/CLK
+  Logical resource: Conteo_1/CK
+  Location pin: SLICE_X6Y0.CLK
   Clock network: Clk_BUFGP
 --------------------------------------------------------------------------------
 
@@ -618,7 +681,7 @@ Clock to Setup on destination clock Clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-Clk            |   10.168|         |         |         |
+Clk            |    9.073|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -627,23 +690,23 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 29135 paths, 0 nets, and 2190 connections
+Constraints cover 18419 paths, 0 nets, and 2067 connections
 
 Design statistics:
-   Minimum period:  10.168ns{1}   (Maximum frequency:  98.348MHz)
+   Minimum period:   9.073ns{1}   (Maximum frequency: 110.217MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Wed Apr 17 12:49:48 2019 
+Analysis completed Mon Apr 22 16:42:26 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 4522 MB
+Peak Memory Usage: 4521 MB
 
 
 

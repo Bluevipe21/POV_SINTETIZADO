@@ -1,10 +1,13 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Apr 17 12:49:38 2019
+// Written by: Map P.20131013 on Mon Apr 22 16:42:16 2019
 //! **************************************************************************
 
 SCHEMATIC START;
 CONFIG VCCAUX = "3.3";
 COMP "Clk" LOCATE = SITE "P129" LEVEL 1;
+COMP "movled<0>" LOCATE = SITE "P30" LEVEL 1;
+COMP "movled<1>" LOCATE = SITE "P27" LEVEL 1;
+COMP "movled<2>" LOCATE = SITE "P29" LEVEL 1;
 COMP "led<0>" LOCATE = SITE "P16" LEVEL 1;
 COMP "led<1>" LOCATE = SITE "P15" LEVEL 1;
 COMP "led<2>" LOCATE = SITE "P20" LEVEL 1;
